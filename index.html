@@ -478,6 +478,105 @@
       letter-spacing: 0.06em;
     }
 
+    /* ── Terms view ── */
+    #terms-view {
+      display: none;
+      position: relative;
+      z-index: 1;
+      padding: 48px 0 80px;
+    }
+    .terms-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      background: transparent;
+      border: 1px solid var(--border);
+      padding: 10px 20px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s;
+      margin-bottom: 48px;
+      font-family: var(--font-sans);
+    }
+    .terms-back:hover { color: var(--fg); border-color: var(--fg); }
+    .terms-doc { max-width: 720px; margin: 0 auto; }
+    .terms-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 32px;
+      margin-bottom: 48px;
+    }
+    .terms-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .terms-main-title {
+      font-family: var(--font-serif);
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 400;
+      color: var(--fg);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .terms-meta { font-size: 12px; color: var(--muted); opacity: 0.7; }
+    .terms-doc h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 400;
+      color: var(--fg);
+      letter-spacing: -0.02em;
+      margin: 48px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .terms-doc h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--fg);
+      margin: 28px 0 10px;
+    }
+    .terms-doc p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .terms-doc ul { list-style: none; padding: 0; margin-bottom: 16px; }
+    .terms-doc ul li {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      padding: 8px 0 8px 20px;
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+    }
+    .terms-doc ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 18px;
+      width: 6px; height: 1px;
+      background: var(--accent);
+      opacity: 0.6;
+    }
+    .terms-doc ul li:last-child { border-bottom: none; }
+    .terms-doc ul li strong { color: var(--fg); font-weight: 600; }
+    .terms-footer-note {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      opacity: 0.6;
+      text-align: center;
+    }
+
     /* ── Animations ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(18px); }
@@ -646,6 +745,113 @@
     </div>
   </section>
 
+  <!-- Terms & Conditions View -->
+  <div id="terms-view">
+    <div class="container">
+      <button class="terms-back" onclick="showMain()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Regresar
+      </button>
+      <div class="terms-doc">
+        <div class="terms-header">
+          <div class="terms-eyebrow">Legal</div>
+          <h1 class="terms-main-title">Términos y Condiciones<br>de Uso</h1>
+          <p class="terms-meta">MiCaja &mdash; Vigentes a partir del 6 de abril de 2026 &mdash; micajapos.com.mx</p>
+        </div>
+
+        <h2>1. Introducción</h2>
+        <p>Bienvenido a MiCaja (&ldquo;el Software&rdquo;). Antes de utilizar el Software, lea detenidamente los presentes Términos y Condiciones de Uso (&ldquo;Términos&rdquo;), ya que constituyen un contrato legal vinculante entre usted (&ldquo;el Cliente&rdquo;) y el desarrollador de MiCaja (&ldquo;el Proveedor&rdquo;).</p>
+        <p>Al adquirir, instalar o hacer uso del Software, usted manifiesta su aceptación total e incondicional de los presentes Términos. Si no está de acuerdo con alguna de las disposiciones aquí establecidas, deberá abstenerse de utilizar el Software.</p>
+
+        <h2>2. Definiciones</h2>
+        <ul>
+          <li><strong>&ldquo;Software&rdquo; o &ldquo;MiCaja&rdquo;:</strong> el sistema de punto de venta (POS) e inventario desarrollado por el Proveedor, instalado localmente en las instalaciones del Cliente.</li>
+          <li><strong>&ldquo;Cliente&rdquo;:</strong> la persona física o moral que adquiere una licencia de uso del Software.</li>
+          <li><strong>&ldquo;Proveedor&rdquo;:</strong> el desarrollador y titular de los derechos sobre MiCaja.</li>
+          <li><strong>&ldquo;Licencia&rdquo;:</strong> el derecho de uso no exclusivo e intransferible del Software otorgado al Cliente.</li>
+          <li><strong>&ldquo;Actualización&rdquo;:</strong> toda versión nueva o mejorada del Software que el Proveedor ponga a disposición del Cliente.</li>
+          <li><strong>&ldquo;Datos del Cliente&rdquo;:</strong> la información ingresada, procesada o generada por el Cliente mediante el Software.</li>
+        </ul>
+
+        <h2>3. Licencia de Uso</h2>
+        <h3>3.1 Alcance de la Licencia</h3>
+        <p>El Proveedor otorga al Cliente una licencia de uso limitada, no exclusiva, no sublicenciable e intransferible para utilizar el Software en el equipo o los equipos acordados al momento de la compra, dentro de las instalaciones del propio Cliente.</p>
+        <h3>3.2 Restricciones</h3>
+        <p>Queda expresamente prohibido al Cliente:</p>
+        <ul>
+          <li>Copiar, reproducir, distribuir o revender el Software a terceros.</li>
+          <li>Sublicenciar, arrendar o ceder el Software bajo cualquier modalidad.</li>
+          <li>Realizar ingeniería inversa, descompilar o desensamblar el Software o cualquiera de sus componentes.</li>
+          <li>Modificar, adaptar o crear obras derivadas del Software sin autorización expresa y por escrito del Proveedor.</li>
+          <li>Utilizar el Software para fines distintos a los descritos en la documentación oficial.</li>
+        </ul>
+        <h3>3.3 Instalaciones Adicionales</h3>
+        <p>La licencia estándar permite la instalación del Software en una (1) ubicación. La instalación en equipos o sucursales adicionales deberá ser contratada y pagada de forma independiente.</p>
+
+        <h2>4. Pago y Actualizaciones</h2>
+        <h3>4.1 Pago Único</h3>
+        <p>El Software se comercializa mediante un pago único correspondiente a la instalación inicial. Dicho pago cubre la versión del Software vigente en la fecha de instalación.</p>
+        <h3>4.2 Actualizaciones</h3>
+        <p>Las actualizaciones mayores o nuevas versiones del Software podrán estar sujetas a un costo adicional, el cual será informado al Cliente con anticipación. El Cliente no está obligado a adquirir actualizaciones; no obstante, el Proveedor no garantiza el soporte técnico de versiones antiguas de manera indefinida.</p>
+        <h3>4.3 No Reembolsos</h3>
+        <p>Dado que el Software se instala y configura de forma personalizada en las instalaciones del Cliente, los pagos realizados no son reembolsables una vez efectuada la instalación, salvo disposición contraria acordada por escrito entre ambas partes.</p>
+
+        <h2>5. Instalación y Soporte Técnico</h2>
+        <h3>5.1 Instalación</h3>
+        <p>El Proveedor se encargará de la instalación inicial del Software de forma presencial o a través de acceso remoto, según lo acordado con el Cliente. La instalación incluye la configuración básica del sistema y la capacitación inicial.</p>
+        <h3>5.2 Requisitos Técnicos</h3>
+        <p>El Cliente es responsable de contar con el equipo de cómputo necesario para la operación del Software. Los requisitos mínimos serán comunicados por el Proveedor antes de la instalación.</p>
+        <h3>5.3 Soporte</h3>
+        <p>El Proveedor ofrecerá soporte técnico básico relacionado con el funcionamiento del Software. El soporte para problemas de hardware, sistema operativo, red o equipos periféricos ajenos al Software no está incluido, salvo acuerdo expreso.</p>
+
+        <h2>6. Privacidad y Datos</h2>
+        <h3>6.1 Almacenamiento Local</h3>
+        <p>MiCaja opera de forma completamente local. Todos los datos del Cliente &mdash;incluyendo productos, ventas, clientes y configuraciones&mdash; se almacenan exclusivamente en los equipos del propio Cliente. El Proveedor no almacena, accede ni transmite datos del Cliente a servidores externos.</p>
+        <h3>6.2 Responsabilidad de los Datos</h3>
+        <p>El Cliente es el único responsable de la custodia, respaldo y seguridad de sus datos. Se recomienda realizar respaldos periódicos de la base de datos. El Proveedor no se hace responsable por la pérdida de información derivada de fallas en el equipo, errores del operador o eventos de fuerza mayor.</p>
+        <h3>6.3 Acceso para Soporte</h3>
+        <p>En caso de que el Cliente solicite soporte técnico remoto, el Proveedor podrá acceder temporalmente al sistema únicamente para fines de diagnóstico y resolución del problema reportado, con el consentimiento expreso del Cliente.</p>
+
+        <h2>7. Propiedad Intelectual</h2>
+        <p>MiCaja, su código fuente, diseño, logotipos, documentación y todos los elementos que lo integran son propiedad exclusiva del Proveedor y están protegidos por las leyes de derechos de autor y propiedad intelectual aplicables en los Estados Unidos Mexicanos.</p>
+        <p>La adquisición de una licencia no implica la transferencia de ningún derecho de propiedad intelectual al Cliente.</p>
+
+        <h2>8. Limitación de Responsabilidad</h2>
+        <p>En la máxima medida permitida por la ley aplicable, el Proveedor no será responsable por:</p>
+        <ul>
+          <li>Pérdida de datos, ingresos o ganancias derivadas del uso o la imposibilidad de uso del Software.</li>
+          <li>Daños causados por el uso inadecuado del Software o por incumplimiento de los requisitos técnicos mínimos.</li>
+          <li>Interrupciones en el servicio causadas por factores externos al Software (fallas eléctricas, de red, de hardware, etc.).</li>
+          <li>Errores u omisiones en la información ingresada por el propio Cliente.</li>
+        </ul>
+        <p>La responsabilidad máxima del Proveedor ante el Cliente, en cualquier caso, no excederá el monto pagado por el Cliente por la licencia del Software.</p>
+
+        <h2>9. Garantía Limitada</h2>
+        <p>El Proveedor garantiza que el Software funcionará de manera sustancialmente conforme a su documentación durante un período de treinta (30) días naturales contados a partir de la fecha de instalación. Esta garantía no aplica si el problema es causado por modificaciones no autorizadas, uso inadecuado o incompatibilidades de hardware ajenas al Proveedor.</p>
+        <p>Fuera del período de garantía, el Proveedor podrá ofrecer correcciones de errores según su disponibilidad y criterio.</p>
+
+        <h2>10. Terminación de la Licencia</h2>
+        <p>El Proveedor podrá revocar la licencia de uso en cualquier momento si el Cliente incumple cualquiera de las disposiciones de los presentes Términos. En caso de terminación por incumplimiento, el Cliente no tendrá derecho a reembolso alguno y deberá dejar de utilizar el Software de inmediato.</p>
+
+        <h2>11. Legislación Aplicable y Jurisdicción</h2>
+        <p>Los presentes Términos se rigen por las leyes vigentes en los Estados Unidos Mexicanos. Para cualquier controversia derivada de la interpretación o cumplimiento de los presentes Términos, las partes se someten a la jurisdicción de los tribunales competentes de la República Mexicana, renunciando a cualquier otro fuero que pudiera corresponderles por razón de su domicilio presente o futuro.</p>
+
+        <h2>12. Modificaciones a los Términos</h2>
+        <p>El Proveedor se reserva el derecho de modificar los presentes Términos en cualquier momento. Las modificaciones serán notificadas al Cliente a través del sitio web micajapos.com.mx o por cualquier otro medio de comunicación acordado. El uso continuado del Software después de la notificación de cambios implica la aceptación de los Términos modificados.</p>
+
+        <h2>13. Contacto</h2>
+        <p>Para preguntas, soporte técnico o cualquier asunto relacionado con los presentes Términos, el Cliente podrá comunicarse a través de los siguientes medios:</p>
+        <ul>
+          <li><strong>Sitio web:</strong> micajapos.com.mx</li>
+          <li><strong>Facebook:</strong> facebook.com/profile.php?id=61576392462341</li>
+        </ul>
+        <p>Horario de atención: Lunes a viernes de 9:00 a 18:00 horas (hora del Centro de México).</p>
+
+        <p class="terms-footer-note">Última actualización: 6 de abril de 2026 &mdash; MiCaja &mdash; micajapos.com.mx</p>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -658,6 +864,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
           Visítanos en Facebook
         </a>
+        <button onclick="showTerms()" style="background:none;border:none;cursor:pointer;font-family:var(--font-sans);font-size:12px;color:var(--muted);opacity:0.6;padding:0;text-decoration:underline;text-underline-offset:3px;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Términos y Condiciones</button>
 
       </div>
     </div>
@@ -675,6 +882,25 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Terms toggle
+    const MAIN_SELECTORS = ['section.hero', 'hr.divider', '.stats-bar', 'section#funciones', 'section.manual-cta', 'footer'];
+
+    function showTerms() {
+      MAIN_SELECTORS.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => el.style.display = 'none');
+      });
+      document.getElementById('terms-view').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showMain() {
+      document.getElementById('terms-view').style.display = 'none';
+      MAIN_SELECTORS.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => el.style.display = '');
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   </script>
 
 </body>
