@@ -76,9 +76,26 @@ function navigateLightbox(dir) {
 document.addEventListener('keydown', (e) => {
   const lb = document.getElementById('lightbox');
   if (!lb.classList.contains('open')) return;
-  if (e.key === 'Escape')      closeLightbox();
-  if (e.key === 'ArrowLeft')   navigateLightbox(-1);
-  if (e.key === 'ArrowRight')  navigateLightbox(1);
+
+  if (e.key === 'Escape')     { closeLightbox(); return; }
+  if (e.key === 'ArrowLeft')  { navigateLightbox(-1); return; }
+  if (e.key === 'ArrowRight') { navigateLightbox(1); return; }
+
+  // Focus trap: mantiene el foco dentro del lightbox con Tab / Shift+Tab
+  if (e.key === 'Tab') {
+    const focusable = Array.from(lb.querySelectorAll('button')).filter(
+      btn => btn.offsetParent !== null  // excluye prev/next cuando están ocultos en móvil
+    );
+    const first = focusable[0];
+    const last  = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
 });
 
 // ── Scroll-triggered fade-in ──
