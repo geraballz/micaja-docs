@@ -15,6 +15,16 @@ const galleryObserver = new IntersectionObserver((entries) => {
 const galleryGrid = document.getElementById('gallery-grid');
 if (galleryGrid) galleryObserver.observe(galleryGrid);
 
+// Keyboard accessibility: Enter/Space abre el lightbox en cada gallery-item
+document.querySelectorAll('.gallery-item').forEach((item, i) => {
+  item.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openLightbox(i);
+    }
+  });
+});
+
 function buildLightboxContent(index) {
   const items = document.querySelectorAll('.gallery-item');
   const item = items[index];
@@ -40,8 +50,12 @@ function buildLightboxContent(index) {
 function openLightbox(index) {
   currentIndex = index;
   buildLightboxContent(index);
-  document.getElementById('lightbox').classList.add('open');
+  const lb = document.getElementById('lightbox');
+  lb.classList.add('open');
   document.body.style.overflow = 'hidden';
+  // Mueve el foco al botón de cerrar para accesibilidad
+  const closeBtn = lb.querySelector('.lightbox-close');
+  if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
 }
 
 function closeLightbox() {
@@ -78,5 +92,3 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-

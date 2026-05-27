@@ -7,7 +7,7 @@
   <meta name="description" content="Sistema de punto de venta e inventario diseñado para papelerías y tiendas de abarrotes." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -36,20 +36,18 @@
 
   <hr class="divider" />
 
-  <!-- Stats -->
-  <div class="stats-bar">
-    <div class="container" style="padding: 0;">
-      <div class="stats-inner">
-        <div class="stat-item fade-in">
-          <div class="stat-number">2</div>
-          <div class="stat-label">Roles de acceso</div>
-        </div>
-        <div class="stat-item fade-in">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Offline &amp; local</div>
-        </div>
-      </div>
-    </div>
+  <!-- Facts (reemplaza el hero-metric stats bar) -->
+  <div class="facts-bar">
+    <ul class="facts-list">
+      <li class="fact-item fade-in">
+        <span class="fact-label">Offline &amp; Local</span>
+        <span class="fact-desc">Todos los datos en tu equipo. Funciona sin internet y sin depender de servidores externos.</span>
+      </li>
+      <li class="fact-item fade-in">
+        <span class="fact-label">Administrador y Cajero</span>
+        <span class="fact-desc">Dos roles con permisos diferenciados. Control total desde el panel del administrador.</span>
+      </li>
+    </ul>
   </div>
 
   <!-- Features -->
@@ -61,48 +59,37 @@
         <p class="section-desc">Diseñado específicamente para comercios — sin funciones de más, sin curva de aprendizaje.</p>
       </div>
 
-      <div class="features-grid fade-in">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-          </div>
-          <div class="feature-name">Punto de Venta</div>
-          <div class="feature-desc">Grid de productos con búsqueda instantánea, escáner de código de barras y carrito de compra.</div>
+      <!-- Features list: reemplaza el identical card grid -->
+      <div class="features-list fade-in">
+        <div class="feature-row">
+          <span class="fr-num">01</span>
+          <div class="fr-name">Punto de Venta</div>
+          <div class="fr-desc">Grid de productos con búsqueda instantánea, escáner de código de barras y carrito de compra.</div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-          </div>
-          <div class="feature-name">Inventario</div>
-          <div class="feature-desc">Alta y edición de productos con precio de costo, precio de venta y margen de ganancia automático.</div>
+        <div class="feature-row">
+          <span class="fr-num">02</span>
+          <div class="fr-name">Inventario</div>
+          <div class="fr-desc">Alta y edición de productos con precio de costo, precio de venta y margen de ganancia automático.</div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          </div>
-          <div class="feature-name">Dashboard</div>
-          <div class="feature-desc">KPIs de ventas, gráficas de los últimos 7 días y resumen de los últimos 6 meses.</div>
+        <div class="feature-row">
+          <span class="fr-num">03</span>
+          <div class="fr-name">Dashboard</div>
+          <div class="fr-desc">KPIs de ventas, gráficas de los últimos 7 días y resumen de los últimos 6 meses.</div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          </div>
-          <div class="feature-name">Tickets</div>
-          <div class="feature-desc">Historial de ventas agrupado por día. Recibo térmico de 58 mm con QR y exportación a PDF.</div>
+        <div class="feature-row">
+          <span class="fr-num">04</span>
+          <div class="fr-name">Tickets</div>
+          <div class="fr-desc">Historial de ventas agrupado por día. Recibo térmico de 58 mm con QR y exportación a PDF.</div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-          </div>
-          <div class="feature-name">Etiquetas</div>
-          <div class="feature-desc">Generación e impresión de etiquetas con código de barras CODE128 en hoja carta, grid de 3 columnas.</div>
+        <div class="feature-row">
+          <span class="fr-num">05</span>
+          <div class="fr-name">Etiquetas</div>
+          <div class="fr-desc">Generación e impresión de etiquetas con código de barras CODE128 en hoja carta, grid de 3 columnas.</div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          </div>
-          <div class="feature-name">Usuarios &amp; Roles</div>
-          <div class="feature-desc">Gestión de cajeros desde el panel admin. Dos roles: Administrador y Cajero con permisos diferenciados.</div>
+        <div class="feature-row">
+          <span class="fr-num">06</span>
+          <div class="fr-name">Usuarios &amp; Roles</div>
+          <div class="fr-desc">Gestión de cajeros desde el panel admin. Dos roles: Administrador y Cajero con permisos diferenciados.</div>
         </div>
       </div>
 
@@ -111,64 +98,64 @@
         <div class="gallery-label">Vista previa</div>
         <div class="gallery-grid" id="gallery-grid">
 
-          <div class="gallery-item" onclick="openLightbox(0)" data-caption="Punto de Venta">
-            <img src="screenshots/pos.png" alt="Punto de Venta" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(0)" data-caption="Punto de Venta">
+            <img src="screenshots/pos.png" alt="Punto de Venta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
               <div class="gallery-ph-label">Punto de Venta</div>
             </div>
             <div class="gallery-overlay"><span class="gallery-overlay-text">Punto de Venta</span></div>
-            <div class="gallery-zoom-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+            <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
-          <div class="gallery-item" onclick="openLightbox(1)" data-caption="Inventario">
-            <img src="screenshots/inventario.png" alt="Inventario" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(1)" data-caption="Inventario">
+            <img src="screenshots/inventario.png" alt="Inventario" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
               <div class="gallery-ph-label">Inventario</div>
             </div>
             <div class="gallery-overlay"><span class="gallery-overlay-text">Inventario</span></div>
-            <div class="gallery-zoom-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+            <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
-          <div class="gallery-item" onclick="openLightbox(2)" data-caption="Dashboard">
-            <img src="screenshots/dashboard.png" alt="Dashboard" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(2)" data-caption="Dashboard">
+            <img src="screenshots/dashboard.png" alt="Dashboard" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
               <div class="gallery-ph-label">Dashboard</div>
             </div>
             <div class="gallery-overlay"><span class="gallery-overlay-text">Dashboard</span></div>
-            <div class="gallery-zoom-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+            <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
-          <div class="gallery-item" onclick="openLightbox(3)" data-caption="Tickets">
-            <img src="screenshots/tickets.png" alt="Tickets" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(3)" data-caption="Tickets">
+            <img src="screenshots/tickets.png" alt="Tickets" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
               <div class="gallery-ph-label">Tickets</div>
             </div>
             <div class="gallery-overlay"><span class="gallery-overlay-text">Tickets</span></div>
-            <div class="gallery-zoom-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+            <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
-          <div class="gallery-item" onclick="openLightbox(4)" data-caption="Etiquetas">
-            <img src="screenshots/etiquetas.png" alt="Etiquetas" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(4)" data-caption="Etiquetas">
+            <img src="screenshots/etiquetas.png" alt="Etiquetas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
               <div class="gallery-ph-label">Etiquetas</div>
             </div>
             <div class="gallery-overlay"><span class="gallery-overlay-text">Etiquetas</span></div>
-            <div class="gallery-zoom-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+            <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
-          <div class="gallery-item" onclick="openLightbox(5)" data-caption="Configuración">
-            <img src="screenshots/config.png" alt="Configuración" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(5)" data-caption="Configuración">
+            <img src="screenshots/config.png" alt="Configuración" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
               <div class="gallery-ph-label">Configuración</div>
             </div>
             <div class="gallery-overlay"><span class="gallery-overlay-text">Configuración</span></div>
-            <div class="gallery-zoom-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
+            <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
         </div>
@@ -177,19 +164,21 @@
   </section>
 
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+  <div class="lightbox" id="lightbox"
+       role="dialog" aria-modal="true" aria-label="Vista previa de pantallas"
+       onclick="closeLightboxOnBg(event)">
     <div class="lightbox-inner" id="lightbox-inner">
-      <button class="lightbox-close" onclick="closeLightbox()">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar vista previa">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
-      <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">
+      <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="Imagen anterior">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
-      <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">
+      <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="Imagen siguiente">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
       <div id="lightbox-content"></div>
-      <div class="lightbox-caption" id="lightbox-caption"></div>
+      <div class="lightbox-caption" id="lightbox-caption" aria-live="polite"></div>
     </div>
   </div>
 
@@ -236,7 +225,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
           Visítanos en Facebook
         </a>
-        <a href="terminos.html" style="font-size:12px;color:var(--muted);opacity:0.6;text-decoration:underline;text-underline-offset:3px;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Términos y Condiciones</a>
+        <a href="terminos.html" class="footer-terms">Términos y Condiciones</a>
       </div>
     </div>
   </footer>
