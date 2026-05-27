@@ -74,10 +74,8 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-subtle);
-  background: rgba(10,10,10,0.80);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
 }
 .nav-inner {
   display: flex;
@@ -94,7 +92,7 @@ nav {
   gap: 10px;
   text-decoration: none;
 }
-.nav-logo img { width: 28px; height: 28px; object-fit: contain; }
+.nav-logo img { width: 18px; height: 18px; object-fit: contain; }
 .nav-logo-text {
   font-size: 15px;
   font-weight: 700;
@@ -190,7 +188,8 @@ nav {
   transition: background 0.2s, transform 0.15s;
   letter-spacing: 0.01em;
 }
-.btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.btn-primary:hover  { background: var(--accent-hover); transform: translateY(-1px); }
+.btn-primary:active { background: var(--accent); transform: translateY(1px); }
 .btn-primary svg { flex-shrink: 0; }
 
 .btn-ghost {
@@ -207,7 +206,9 @@ nav {
   border: 1px solid var(--border);
   transition: border-color 0.2s, color 0.2s, transform 0.15s;
 }
-.btn-ghost:hover { border-color: var(--fg); color: var(--fg); transform: translateY(-1px); }
+.btn-ghost:hover  { border-color: var(--fg); color: var(--fg); transform: translateY(-1px); }
+.btn-ghost:active { transform: translateY(1px); }
+.btn-ghost-sm { font-size: 13px; padding: 9px 20px; }
 
 /* ── Divider ── */
 .divider {
@@ -223,14 +224,6 @@ nav {
   padding: 88px 0;
   position: relative;
   z-index: 1;
-}
-.section-label {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 16px;
 }
 .section-title {
   font-family: var(--font-serif);
@@ -298,7 +291,7 @@ nav {
   margin: 0 auto;
 }
 .fact-item {
-  padding: 32px 32px;
+  padding: 32px 24px;    /* 24px horizontal alinea con .container */
   border-right: 1px solid var(--border);
 }
 .fact-item:last-child { border-right: none; }
@@ -482,18 +475,6 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 
 /* ── Gallery ── */
 .gallery-section { margin-top: 80px; }
-.gallery-label {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 28px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.gallery-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .gallery-item {
   position: relative;
@@ -514,7 +495,8 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 .gallery-item:nth-child(6) { transition-delay: 0.22s; }
 .gallery-item:hover,
 .gallery-item:focus-visible { border-color: var(--accent-border); }
-.gallery-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.gallery-item:focus-visible  { outline: 2px solid var(--accent); outline-offset: 2px; }
+.gallery-item.visible:active { transform: scale(0.99); }
 .gallery-item img {
   width: 100%; height: 100%;
   object-fit: cover;
@@ -714,4 +696,35 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 }
 @media (max-width: 480px) {
   .gallery-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  /* Hero CSS animations */
+  .hero-eyebrow,
+  .hero-title,
+  .hero-subtitle,
+  .hero-actions {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  /* Scroll fade-ins */
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  /* Gallery entrance y hover */
+  .gallery-item {
+    opacity: 1;
+    transform: none !important;
+    transition: border-color 0.15s;
+  }
+  .gallery-item img     { transition: none; }
+  .gallery-overlay      { transition: opacity 0.15s ease; }
+  .gallery-overlay-text { transition: none; }
+  .gallery-zoom-icon    { transition: opacity 0.15s ease; }
+  /* Lightbox */
+  .lightbox-inner { transition: opacity 0.15s ease; }
 }
