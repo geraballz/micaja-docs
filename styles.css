@@ -868,6 +868,27 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 @media (max-width: 520px) {
   .hero { padding: 80px 0 64px; }
   .feature-row { padding: 16px 0; }
+
+  /* Los dos botones quedaban apilados con anchos distintos y centrados.
+     A ancho completo se leen como un par y crecen el área de toque. */
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-ghost { justify-content: center; }
+
+  /* "Impresora de tickets" se parte en dos líneas y el modelo se quedaba
+     colgado arriba a la derecha. Apilados se alinean. */
+  .hw-item { grid-template-columns: 1fr; gap: 4px; }
+  .hw-modelo { text-align: left; }
+}
+
+/* ── Táctil: no hay hover, así que lo que dependía de él era invisible ──
+   El ícono de zoom y el rótulo de cada captura solo aparecían al pasar el
+   mouse. En un teléfono eso significa que nunca se veían: ni se sabía que la
+   miniatura se puede tocar, ni qué pantalla era. */
+@media (hover: none) {
+  .gallery-zoom-icon { opacity: 1; transform: scale(1); }
+  .gallery-overlay   { opacity: 1; }
+  .gallery-overlay-text { transform: translateY(0); }
 }
 @media (max-width: 480px) {
   .gallery-grid { grid-template-columns: 1fr; }
