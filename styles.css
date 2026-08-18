@@ -21,6 +21,12 @@
   --accent-border:  rgba(240, 192, 64, 0.25);
   --on-accent:      #0d0d0d;  /* texto sobre fondos de acento */
   --font-sans:      'Plus Jakarta Sans', sans-serif;
+  /* Ritmo vertical y rejilla. Una sola escala: si necesitas un valor nuevo,
+     agrégalo aquí, no lo escribas suelto en una regla. */
+  --esp-seccion:    88px;     /* padding vertical de cada <section> */
+  --esp-bloque:     48px;     /* del encabezado de sección a su contenido */
+  --gap-col:        48px;     /* separación entre las dos columnas */
+
   --radius:         4px;      /* el `rounded` de Tailwind que usa el POS */
   --radius-lg:      6px;      /* `rounded-md` — tarjetas y cajas grandes */
   --radius-pill:    999px;    /* `rounded-full` — chips y badges */
@@ -197,7 +203,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-top: 44px;
+  margin-top: var(--esp-bloque);
   flex-wrap: wrap;
   opacity: 0;
   animation: fadeUp 0.7s ease 0.4s forwards;
@@ -250,7 +256,7 @@ nav {
 
 /* ── Section base ── */
 .section {
-  padding: 88px 0;
+  padding: var(--esp-seccion) 0;
   position: relative;
   z-index: 1;
 }
@@ -273,7 +279,7 @@ nav {
 
 /* ── Features list (reemplaza el card grid idéntico) ── */
 .features-list {
-  margin-top: 56px;
+  margin-top: var(--esp-bloque);
   border-top: 1px solid var(--border);
 }
 .feature-row {
@@ -340,7 +346,7 @@ nav {
 }
 
 /* ── Manual CTA ── */
-.manual-cta { padding: 88px 0; position: relative; z-index: 1; }
+.manual-cta { padding: var(--esp-seccion) 0; position: relative; z-index: 1; }
 .manual-box {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
@@ -459,7 +465,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
   font-weight: 700;
   color: var(--fg-strong);
   letter-spacing: -0.01em;
-  margin: 48px 0 16px;
+  margin: var(--esp-bloque) 0 16px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -485,7 +491,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 .terms-doc ul li:last-child { border-bottom: none; }
 .terms-doc ul li strong { color: var(--fg); font-weight: 600; }
 .terms-footer-note {
-  margin-top: 56px;
+  margin-top: var(--esp-bloque);
   padding-top: 24px;
   border-top: 1px solid var(--border);
   font-size: 12px;
@@ -495,7 +501,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 }
 
 /* ── Gallery ── */
-.gallery-section { margin-top: 80px; }
+.gallery-section { margin-top: var(--esp-seccion); }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .gallery-item {
   border-radius: var(--radius-lg);
@@ -711,10 +717,10 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 /* ── Clientes reales ── */
 .clientes-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-col);
   align-items: center;
-  margin-top: 48px;
+  margin-top: var(--esp-bloque);
 }
 .cliente-foto {
   border: 1px solid var(--border);
@@ -756,7 +762,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1px;
-  margin-top: 48px;
+  margin-top: var(--esp-bloque);
   background: var(--border);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -775,7 +781,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 .decision-texto strong { color: var(--fg); font-weight: 600; }
 
 /* ── Avisos ("para que no haya sorpresas") ── */
-.aviso-lista { margin-top: 44px; display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+.aviso-lista { margin-top: var(--esp-bloque); display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
 .aviso-item {
   background: var(--surface);
   padding: 24px 28px;
@@ -791,10 +797,10 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 /* ── Hardware ── */
 .hardware-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-col);
   align-items: center;
-  margin-top: 48px;
+  margin-top: var(--esp-bloque);
 }
 .hardware-lista { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
 .hw-item { background: var(--bg); padding: 18px 22px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline; }
@@ -808,7 +814,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   max-width: 560px;
-  margin: 48px auto 0;
+  margin-top: var(--esp-bloque);   /* alineado a la izquierda como el resto */
 }
 .celular-shot {
   border: 1px solid var(--border);
@@ -820,7 +826,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 .celular-shot img { width: 100%; height: auto; display: block; }
 
 /* ── FAQ ── */
-.faq { margin-top: 48px; border-top: 1px solid var(--border); }
+.faq { margin-top: var(--esp-bloque); border-top: 1px solid var(--border); }
 .faq-item { border-bottom: 1px solid var(--border-subtle); padding: 24px 0; }
 .faq-pregunta { font-size: 15px; font-weight: 600; color: var(--fg-strong); letter-spacing: -0.01em; margin-bottom: 8px; }
 .faq-respuesta { font-size: 14px; color: var(--muted); line-height: 1.75; max-width: 720px; }
