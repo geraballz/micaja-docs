@@ -109,3 +109,18 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ── Versión del footer ──
+// Se lee de version.json (el mismo archivo que consulta AcercaDeModal.js del POS
+// para avisar de actualizaciones) en vez de tenerla escrita en el HTML: así no
+// se vuelve a quedar congelada. El valor del HTML es el respaldo si el fetch
+// falla — por ejemplo al abrir el archivo con file:// en vez de servirlo.
+const versionEl = document.getElementById('footer-version');
+if (versionEl) {
+  fetch('version.json', { cache: 'no-store' })
+    .then(res => (res.ok ? res.json() : null))
+    .then(data => {
+      if (data && data.version) versionEl.textContent = 'v' + data.version;
+    })
+    .catch(() => { /* se queda el valor del HTML */ });
+}
