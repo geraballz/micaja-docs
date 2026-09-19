@@ -12,15 +12,19 @@
 </head>
 <body>
 
-  <a href="#funciones" class="skip-link">Saltar al contenido</a>
+  <a href="#funciones" class="skip-link" data-i18n="skip">Saltar al contenido</a>
 
   <!-- Nav -->
-  <nav aria-label="Navegación principal">
+  <nav data-i18n-aria-label="nav.aria" aria-label="Navegación principal">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
         <img src="poslogo.png" alt="MiCaja" onerror="this.style.display='none'" />
         <span class="nav-logo-text">Mi<span>Caja</span></span>
       </a>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" class="lang-opt is-active" data-lang="es" aria-pressed="true" lang="es">ES</button>
+        <button type="button" class="lang-opt" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
     </div>
   </nav>
 
@@ -28,17 +32,17 @@
   <section class="hero">
     <div class="glow"></div>
     <div class="container">
-      <div class="hero-eyebrow">Sistema POS</div>
-      <h1 class="hero-title">Tu caja,<br><em>inteligente.</em></h1>
-      <p class="hero-subtitle">
+      <div class="hero-eyebrow" data-i18n="hero.eyebrow">Sistema POS</div>
+      <h1 class="hero-title" data-i18n="hero.title">Tu caja,<br><em>inteligente.</em></h1>
+      <p class="hero-subtitle" data-i18n="hero.sub">
         Para papelerías, abarrotes, ferreterías, panaderías — cualquier negocio que cobre en mostrador.
       </p>
       <div class="hero-actions">
         <a href="https://www.facebook.com/profile.php?id=61576392462341" target="_blank" rel="noopener noreferrer" class="btn-primary">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          Mándanos mensaje
+          <span data-i18n="hero.cta1">Mándanos mensaje</span>
         </a>
-        <a href="#funciones" class="btn-ghost">Ver qué hace</a>
+        <a href="#funciones" class="btn-ghost" data-i18n="hero.cta2">Ver qué hace</a>
       </div>
     </div>
   </section>
@@ -49,12 +53,12 @@
   <div class="facts-bar">
     <ul class="facts-list">
       <li class="fact-item fade-in">
-        <span class="fact-label">Sin internet, sin nube</span>
-        <span class="fact-desc">Corre en tu red local bajo Windows. Tus datos nunca salen de tu negocio — sin suscripciones, sin servidores externos.</span>
+        <span class="fact-label" data-i18n="fact1.label">Sin internet, sin nube</span>
+        <span class="fact-desc" data-i18n="fact1.desc">Corre en tu red local bajo Windows. Tus datos nunca salen de tu negocio — sin suscripciones, sin servidores externos.</span>
       </li>
       <li class="fact-item fade-in">
-        <span class="fact-label">Administrador y Cajero</span>
-        <span class="fact-desc">Devoluciones, respaldos y configuración, solo para ti. El cajero cobra y consulta sus tickets del día, y hasta ahí.</span>
+        <span class="fact-label" data-i18n="fact2.label">Administrador y Cajero</span>
+        <span class="fact-desc" data-i18n="fact2.desc">Devoluciones, respaldos y configuración, solo para ti. El cajero cobra y consulta sus tickets del día, y hasta ahí.</span>
       </li>
     </ul>
   </div>
@@ -63,51 +67,51 @@
   <section class="section" id="funciones">
     <div class="container">
       <div class="fade-in">
-        <h2 class="section-title">Todo lo que necesita<br><em>tu negocio.</em></h2>
-        <p class="section-desc">Ocho pantallas, ninguna de relleno. Lo que un mostrador usa todos los días.</p>
+        <h2 class="section-title" data-i18n="func.title">Todo lo que necesita<br><em>tu negocio.</em></h2>
+        <p class="section-desc" data-i18n="func.desc">Ocho pantallas, ninguna de relleno. Lo que un mostrador usa todos los días.</p>
       </div>
 
       <!-- Features list -->
       <div class="features-list fade-in">
         <div class="feature-row">
           <span class="fr-num">01</span>
-          <div class="fr-name">Punto de Venta</div>
-          <div class="fr-desc">Busca por nombre o por código, o escanea con el lector. Carrito editable, cobro en efectivo o pago electrónico, y el cambio calculado solo.</div>
+          <div class="fr-name" data-i18n="f1.name">Punto de Venta</div>
+          <div class="fr-desc" data-i18n="f1.desc">Busca por nombre o por código, o escanea con el lector. Carrito editable, cobro en efectivo o pago electrónico, y el cambio calculado solo.</div>
         </div>
         <div class="feature-row">
           <span class="fr-num">02</span>
-          <div class="fr-name">Inventario</div>
-          <div class="fr-desc">Alta y edición de productos con precio de costo, precio de venta y margen calculado solo. El stock se descuenta en cada venta.</div>
+          <div class="fr-name" data-i18n="f2.name">Inventario</div>
+          <div class="fr-desc" data-i18n="f2.desc">Alta y edición de productos con precio de costo, precio de venta y margen calculado solo. El stock se descuenta en cada venta.</div>
         </div>
         <div class="feature-row">
           <span class="fr-num">03</span>
-          <div class="fr-name">Dashboard</div>
-          <div class="fr-desc">Ventas, ingresos, egresos y balance del día. Gráficas por semana y por mes, formas de pago, y cuánto vendió cada cajero.</div>
+          <div class="fr-name" data-i18n="f3.name">Dashboard</div>
+          <div class="fr-desc" data-i18n="f3.desc">Ventas, ingresos, egresos y balance del día. Gráficas por semana y por mes, formas de pago, y cuánto vendió cada cajero.</div>
         </div>
         <div class="feature-row">
           <span class="fr-num">04</span>
-          <div class="fr-name">Tickets</div>
-          <div class="fr-desc">Historial agrupado por día, con el ticket listo para reimprimir, guardar como imagen o mandar por WhatsApp. Devoluciones completas o de un solo producto.</div>
+          <div class="fr-name" data-i18n="f4.name">Tickets</div>
+          <div class="fr-desc" data-i18n="f4.desc">Historial agrupado por día, con el ticket listo para reimprimir, guardar como imagen o mandar por WhatsApp. Devoluciones completas o de un solo producto.</div>
         </div>
         <div class="feature-row">
           <span class="fr-num">05</span>
-          <div class="fr-name">Etiquetas</div>
-          <div class="fr-desc">Etiquetas con código de barras para imprimir en hoja carta, en varios tamaños. Selección masiva con filtro por categoría o por fecha.</div>
+          <div class="fr-name" data-i18n="f5.name">Etiquetas</div>
+          <div class="fr-desc" data-i18n="f5.desc">Etiquetas con código de barras para imprimir en hoja carta, en varios tamaños. Selección masiva con filtro por categoría o por fecha.</div>
         </div>
         <div class="feature-row">
           <span class="fr-num">06</span>
-          <div class="fr-name">Usuarios y roles</div>
-          <div class="fr-desc">Crea cajeros y dales su propio usuario. Cada quien entra con el suyo y ve solo lo que le toca.</div>
+          <div class="fr-name" data-i18n="f6.name">Usuarios y roles</div>
+          <div class="fr-desc" data-i18n="f6.desc">Crea cajeros y dales su propio usuario. Cada quien entra con el suyo y ve solo lo que le toca.</div>
         </div>
         <div class="feature-row">
           <span class="fr-num">07</span>
-          <div class="fr-name">Configuración</div>
-          <div class="fr-desc">El nombre y el teléfono de tu negocio, que salen impresos en cada ticket y en la pantalla de acceso.</div>
+          <div class="fr-name" data-i18n="f7.name">Configuración</div>
+          <div class="fr-desc" data-i18n="f7.desc">El nombre y el teléfono de tu negocio, que salen impresos en cada ticket y en la pantalla de acceso.</div>
         </div>
         <div class="feature-row">
           <span class="fr-num">08</span>
-          <div class="fr-name">Acceso en red</div>
-          <div class="fr-desc">Un código QR con la dirección del sistema, para conectar una tablet, una laptop o el celular desde donde estés parado.</div>
+          <div class="fr-name" data-i18n="f8.name">Acceso en red</div>
+          <div class="fr-desc" data-i18n="f8.desc">Un código QR con la dirección del sistema, para conectar una tablet, una laptop o el celular desde donde estés parado.</div>
         </div>
       </div>
 
@@ -115,63 +119,63 @@
       <div class="gallery-section fade-in">
         <div class="gallery-grid" id="gallery-grid">
 
-          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(0)" data-caption="Punto de Venta">
-            <img src="screenshots/pos.jpg" alt="Punto de Venta" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(0)" data-caption="Punto de Venta" data-i18n-caption="gal.pos">
+            <img src="screenshots/pos.jpg" alt="Punto de Venta" data-i18n-alt="gal.pos" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
-              <div class="gallery-ph-label">Punto de Venta</div>
+              <div class="gallery-ph-label" data-i18n="gal.pos">Punto de Venta</div>
             </div>
-            <div class="gallery-overlay"><span class="gallery-overlay-text">Punto de Venta</span></div>
+            <div class="gallery-overlay"><span class="gallery-overlay-text" data-i18n="gal.pos">Punto de Venta</span></div>
             <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
-          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(1)" data-caption="Inventario">
-            <img src="screenshots/inventario.jpg" alt="Inventario" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(1)" data-caption="Inventario" data-i18n-caption="gal.inv">
+            <img src="screenshots/inventario.jpg" alt="Inventario" data-i18n-alt="gal.inv" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
-              <div class="gallery-ph-label">Inventario</div>
+              <div class="gallery-ph-label" data-i18n="gal.inv">Inventario</div>
             </div>
-            <div class="gallery-overlay"><span class="gallery-overlay-text">Inventario</span></div>
+            <div class="gallery-overlay"><span class="gallery-overlay-text" data-i18n="gal.inv">Inventario</span></div>
             <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
-          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(2)" data-caption="Dashboard">
-            <img src="screenshots/dashboard.jpg" alt="Dashboard" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(2)" data-caption="Dashboard" data-i18n-caption="gal.dash">
+            <img src="screenshots/dashboard.jpg" alt="Dashboard" data-i18n-alt="gal.dash" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-              <div class="gallery-ph-label">Dashboard</div>
+              <div class="gallery-ph-label" data-i18n="gal.dash">Dashboard</div>
             </div>
-            <div class="gallery-overlay"><span class="gallery-overlay-text">Dashboard</span></div>
+            <div class="gallery-overlay"><span class="gallery-overlay-text" data-i18n="gal.dash">Dashboard</span></div>
             <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
-          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(3)" data-caption="Tickets">
-            <img src="screenshots/tickets.jpg" alt="Tickets" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(3)" data-caption="Tickets" data-i18n-caption="gal.tickets">
+            <img src="screenshots/tickets.jpg" alt="Tickets" data-i18n-alt="gal.tickets" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-              <div class="gallery-ph-label">Tickets</div>
+              <div class="gallery-ph-label" data-i18n="gal.tickets">Tickets</div>
             </div>
-            <div class="gallery-overlay"><span class="gallery-overlay-text">Tickets</span></div>
+            <div class="gallery-overlay"><span class="gallery-overlay-text" data-i18n="gal.tickets">Tickets</span></div>
             <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
-          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(4)" data-caption="Etiquetas">
-            <img src="screenshots/etiquetas.jpg" alt="Etiquetas" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(4)" data-caption="Etiquetas" data-i18n-caption="gal.etiq">
+            <img src="screenshots/etiquetas.jpg" alt="Etiquetas" data-i18n-alt="gal.etiq" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
-              <div class="gallery-ph-label">Etiquetas</div>
+              <div class="gallery-ph-label" data-i18n="gal.etiq">Etiquetas</div>
             </div>
-            <div class="gallery-overlay"><span class="gallery-overlay-text">Etiquetas</span></div>
+            <div class="gallery-overlay"><span class="gallery-overlay-text" data-i18n="gal.etiq">Etiquetas</span></div>
             <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
-          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(5)" data-caption="Configuración">
-            <img src="screenshots/config.jpg" alt="Configuración" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-item" role="button" tabindex="0" onclick="openLightbox(5)" data-caption="Configuración" data-i18n-caption="gal.config">
+            <img src="screenshots/config.jpg" alt="Configuración" data-i18n-alt="gal.config" width="1400" height="629" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <div class="gallery-placeholder" style="display:none">
               <div class="gallery-ph-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-              <div class="gallery-ph-label">Configuración</div>
+              <div class="gallery-ph-label" data-i18n="gal.config">Configuración</div>
             </div>
-            <div class="gallery-overlay"><span class="gallery-overlay-text">Configuración</span></div>
+            <div class="gallery-overlay"><span class="gallery-overlay-text" data-i18n="gal.config">Configuración</span></div>
             <div class="gallery-zoom-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div>
           </div>
 
@@ -182,16 +186,16 @@
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox"
-       role="dialog" aria-modal="true" aria-label="Vista previa de pantallas"
+       role="dialog" aria-modal="true" aria-label="Vista previa de pantallas" data-i18n-aria-label="lb.dialog"
        onclick="closeLightboxOnBg(event)">
     <div class="lightbox-inner" id="lightbox-inner">
-      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar vista previa">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar vista previa" data-i18n-aria-label="lb.close">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
-      <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="Imagen anterior">
+      <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="Imagen anterior" data-i18n-aria-label="lb.prev">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
-      <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="Imagen siguiente">
+      <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="Imagen siguiente" data-i18n-aria-label="lb.next">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
       <div id="lightbox-content"></div>
@@ -205,14 +209,14 @@
   <section class="section">
     <div class="container">
       <div class="fade-in">
-        <h2 class="section-title">La misma caja,<br><em>en el celular.</em></h2>
-        <p class="section-desc">Se abre en el navegador del celular o de una tablet, con el mismo catálogo y el mismo carrito que la computadora del mostrador.</p>
+        <h2 class="section-title" data-i18n="cel.title">La misma caja,<br><em>en el celular.</em></h2>
+        <p class="section-desc" data-i18n="cel.desc">Se abre en el navegador del celular o de una tablet, con el mismo catálogo y el mismo carrito que la computadora del mostrador.</p>
       </div>
       <div class="celular-grid fade-in">
-        <div class="celular-shot"><img src="fotos/celular-venta.jpg" alt="El grid de productos de MiCaja en la pantalla de un celular" loading="lazy" /></div>
-        <div class="celular-shot"><img src="fotos/celular-cobro.jpg" alt="La pantalla de cobro de MiCaja en un celular, con el total y el efectivo recibido" loading="lazy" /></div>
+        <div class="celular-shot"><img src="fotos/celular-venta.jpg" alt="El grid de productos de MiCaja en la pantalla de un celular" data-i18n-alt="cel.alt1" loading="lazy" /></div>
+        <div class="celular-shot"><img src="fotos/celular-cobro.jpg" alt="La pantalla de cobro de MiCaja en un celular, con el total y el efectivo recibido" data-i18n-alt="cel.alt2" loading="lazy" /></div>
       </div>
-      <p class="hardware-nota fade-in">
+      <p class="hardware-nota fade-in" data-i18n="cel.nota">
         El ticket lo sigue imprimiendo la computadora de la caja: la impresora está conectada ahí.
       </p>
     </div>
@@ -222,22 +226,22 @@
   <section class="section section-alt">
     <div class="container">
       <div class="fade-in">
-        <h2 class="section-title">Corre en el equipo<br><em>que ya tienes.</em></h2>
-        <p class="section-desc">MiCaja se instala en la computadora del mostrador — también sirve una que tengas guardada. No hay que comprar terminal nueva.</p>
+        <h2 class="section-title" data-i18n="hw.title">Corre en el equipo<br><em>que ya tienes.</em></h2>
+        <p class="section-desc" data-i18n="hw.desc">MiCaja se instala en la computadora del mostrador — también sirve una que tengas guardada. No hay que comprar terminal nueva.</p>
       </div>
       <div class="hardware-grid">
         <figure class="cliente-foto fade-in">
-          <img src="fotos/equipo-que-ya-tienes.jpg" alt="Una mini PC Lenovo ThinkCentre encendida bajo el mostrador de un negocio" loading="lazy" />
-          <figcaption>Una mini PC de segunda mano bajo el mostrador. Eso basta para correr la caja, el inventario y el dashboard del negocio.</figcaption>
+          <img src="fotos/equipo-que-ya-tienes.jpg" alt="Una mini PC Lenovo ThinkCentre encendida bajo el mostrador de un negocio" data-i18n-alt="hw.alt" loading="lazy" />
+          <figcaption data-i18n="hw.pie">Una mini PC de segunda mano bajo el mostrador. Eso basta para correr la caja, el inventario y el dashboard del negocio.</figcaption>
         </figure>
         <div class="fade-in">
           <div class="hardware-lista">
-            <div class="hw-item"><span class="hw-nombre">Báscula</span><span class="hw-modelo">Rhino BAR-8RS · 40 kg</span></div>
-            <div class="hw-item"><span class="hw-nombre">Impresora de tickets</span><span class="hw-modelo">Térmica 58 mm ESC/POS</span></div>
-            <div class="hw-item"><span class="hw-nombre">Lector de código de barras</span><span class="hw-modelo">USB, o la cámara</span></div>
-            <div class="hw-item"><span class="hw-nombre">Cajón de dinero</span><span class="hw-modelo">Se abre al cobrar</span></div>
+            <div class="hw-item"><span class="hw-nombre" data-i18n="hw1.nombre">Báscula</span><span class="hw-modelo">Rhino BAR-8RS · 40 kg</span></div>
+            <div class="hw-item"><span class="hw-nombre" data-i18n="hw2.nombre">Impresora de tickets</span><span class="hw-modelo" data-i18n="hw2.modelo">Térmica 58 mm ESC/POS</span></div>
+            <div class="hw-item"><span class="hw-nombre" data-i18n="hw3.nombre">Lector de código de barras</span><span class="hw-modelo" data-i18n="hw3.modelo">USB, o la cámara</span></div>
+            <div class="hw-item"><span class="hw-nombre" data-i18n="hw4.nombre">Cajón de dinero</span><span class="hw-modelo" data-i18n="hw4.modelo">Se abre al cobrar</span></div>
           </div>
-          <p class="hardware-nota">Esto es hardware probado en mostrador, no una lista de compatibilidad. Si tienes otro modelo, escríbenos y lo revisamos antes de que compres nada. Las marcas son de sus fabricantes y no tenemos relación comercial con ellos.</p>
+          <p class="hardware-nota" data-i18n="hw.nota">Esto es hardware probado en mostrador, no una lista de compatibilidad. Si tienes otro modelo, escríbenos y lo revisamos antes de que compres nada. Las marcas son de sus fabricantes y no tenemos relación comercial con ellos.</p>
         </div>
       </div>
     </div>
@@ -247,24 +251,24 @@
   <section class="section">
     <div class="container">
       <div class="fade-in">
-        <h2 class="section-title">Ya está en<br><em>mostradores reales.</em></h2>
-        <p class="section-desc">Negocios que abren, cobran y cierran caja con MiCaja todos los días.</p>
+        <h2 class="section-title" data-i18n="cli.title">Ya está en<br><em>mostradores reales.</em></h2>
+        <p class="section-desc" data-i18n="cli.desc">Negocios que abren, cobran y cierran caja con MiCaja todos los días.</p>
       </div>
       <div class="clientes-grid">
         <figure class="cliente-foto fade-in">
-          <img src="fotos/mostrador-pos.jpg" alt="Un mostrador con MiCaja en pantalla, un lector de código de barras y una impresora térmica" loading="lazy" />
-          <figcaption>Un mostrador trabajando con MiCaja: lector de código de barras, impresora térmica y cajón de dinero, sobre la computadora que el negocio ya tenía.</figcaption>
+          <img src="fotos/mostrador-pos.jpg" alt="Un mostrador con MiCaja en pantalla, un lector de código de barras y una impresora térmica" data-i18n-alt="cli.alt" loading="lazy" />
+          <figcaption data-i18n="cli.pie">Un mostrador trabajando con MiCaja: lector de código de barras, impresora térmica y cajón de dinero, sobre la computadora que el negocio ya tenía.</figcaption>
         </figure>
         <div class="fade-in">
           <div class="cliente-item">
-            <div class="cliente-lugar">Abarrotes · Puebla</div>
-            <div class="cliente-nombre">Una tienda de barrio</div>
-            <p class="cliente-desc">Lector de código de barras, impresora de tickets y cajón de dinero, sobre la misma computadora que ya tenían en el mostrador. No compraron nada nuevo.</p>
+            <div class="cliente-lugar" data-i18n="cli1.lugar">Abarrotes · Puebla</div>
+            <div class="cliente-nombre" data-i18n="cli1.nombre">Una tienda de barrio</div>
+            <p class="cliente-desc" data-i18n="cli1.desc">Lector de código de barras, impresora de tickets y cajón de dinero, sobre la misma computadora que ya tenían en el mostrador. No compraron nada nuevo.</p>
           </div>
           <div class="cliente-item">
-            <div class="cliente-lugar">Papelería</div>
-            <div class="cliente-nombre">Donde todo se prueba primero</div>
-            <p class="cliente-desc">Cada función de MiCaja pasa por este mostrador antes de llegar a cualquier otro negocio. Cartulinas, libretas, foamis: cada producto con su precio y su stock, y el ticket saliendo solo al cerrar la venta.</p>
+            <div class="cliente-lugar" data-i18n="cli2.lugar">Papelería</div>
+            <div class="cliente-nombre" data-i18n="cli2.nombre">Donde todo se prueba primero</div>
+            <p class="cliente-desc" data-i18n="cli2.desc">Cada función de MiCaja pasa por este mostrador antes de llegar a cualquier otro negocio. Cartulinas, libretas, foamis: cada producto con su precio y su stock, y el ticket saliendo solo al cerrar la venta.</p>
           </div>
         </div>
       </div>
@@ -275,25 +279,25 @@
   <section class="section section-alt">
     <div class="container">
       <div class="fade-in">
-        <h2 class="section-title">Por qué está<br><em>hecho así.</em></h2>
-        <p class="section-desc">Cuatro decisiones que tomamos a propósito. Ninguna se pide en una demo, pero se notan al mes de estar usándolo.</p>
+        <h2 class="section-title" data-i18n="dec.title">Por qué está<br><em>hecho así.</em></h2>
+        <p class="section-desc" data-i18n="dec.desc">Cuatro decisiones que tomamos a propósito. Ninguna se pide en una demo, pero se notan al mes de estar usándolo.</p>
       </div>
       <div class="decisiones fade-in">
         <div class="decision">
-          <div class="decision-titulo">El cajero no ve tus costos</div>
-          <p class="decision-texto">Puede vender, cobrar, imprimir el ticket y hasta ajustar un precio con tu PIN. Pero cuánto te costó cada cosa y a qué proveedor se la compras, <strong>eso solo lo ves tú</strong>. No es desconfianza: es que ese dato no le sirve para atender rápido.</p>
+          <div class="decision-titulo" data-i18n="dec1.titulo">El cajero no ve tus costos</div>
+          <p class="decision-texto" data-i18n="dec1.texto">Puede vender, cobrar, imprimir el ticket y hasta ajustar un precio con tu PIN. Pero cuánto te costó cada cosa y a qué proveedor se la compras, <strong>eso solo lo ves tú</strong>. No es desconfianza: es que ese dato no le sirve para atender rápido.</p>
         </div>
         <div class="decision">
-          <div class="decision-titulo">Un ticket cancelado no se borra</div>
-          <p class="decision-texto">Se marca como cancelado y queda registrado <strong>quién lo hizo, cuándo y por qué</strong>. El historial es una bitácora, no un borrador: lo que pasó en tu caja se puede consultar después, aunque haya sido un error.</p>
+          <div class="decision-titulo" data-i18n="dec2.titulo">Un ticket cancelado no se borra</div>
+          <p class="decision-texto" data-i18n="dec2.texto">Se marca como cancelado y queda registrado <strong>quién lo hizo, cuándo y por qué</strong>. El historial es una bitácora, no un borrador: lo que pasó en tu caja se puede consultar después, aunque haya sido un error.</p>
         </div>
         <div class="decision">
-          <div class="decision-titulo">Para vender no necesitas internet</div>
-          <p class="decision-texto">El sistema vive en la red de tu negocio, no en un servidor ajeno. Si se cae el internet <strong>sigues cobrando</strong>, imprimiendo tickets y descontando stock igual que siempre.</p>
+          <div class="decision-titulo" data-i18n="dec3.titulo">Para vender no necesitas internet</div>
+          <p class="decision-texto" data-i18n="dec3.texto">El sistema vive en la red de tu negocio, no en un servidor ajeno. Si se cae el internet <strong>sigues cobrando</strong>, imprimiendo tickets y descontando stock igual que siempre.</p>
         </div>
         <div class="decision">
-          <div class="decision-titulo">El precio se cambia sin salir de la venta</div>
-          <p class="decision-texto">Con tu PIN de administrador, que caduca solo al rato. Pensado para negocios donde el precio cambia seguido: <strong>el cajero no tiene que ir a Inventario</strong> ni hablarte por teléfono a media fila.</p>
+          <div class="decision-titulo" data-i18n="dec4.titulo">El precio se cambia sin salir de la venta</div>
+          <p class="decision-texto" data-i18n="dec4.texto">Con tu PIN de administrador, que caduca solo al rato. Pensado para negocios donde el precio cambia seguido: <strong>el cajero no tiene que ir a Inventario</strong> ni hablarte por teléfono a media fila.</p>
         </div>
       </div>
     </div>
@@ -303,29 +307,29 @@
   <section class="section">
     <div class="container">
       <div class="fade-in">
-        <h2 class="section-title">Para que no<br><em>haya sorpresas.</em></h2>
-        <p class="section-desc">Tres cosas que conviene saber desde ahora, y no el día de la instalación.</p>
+        <h2 class="section-title" data-i18n="avi.title">Para que no<br><em>haya sorpresas.</em></h2>
+        <p class="section-desc" data-i18n="avi.desc">Tres cosas que conviene saber desde ahora, y no el día de la instalación.</p>
       </div>
       <div class="aviso-lista fade-in">
         <div class="aviso-item">
           <span class="aviso-icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
           <div>
-            <div class="aviso-titulo">La facturación va por fuera</div>
-            <p class="aviso-texto">MiCaja lleva tus ventas, tu inventario y tu caja. No emite CFDI ni se conecta con el SAT, así que la parte fiscal la sigues llevando por donde ya la llevas hoy.</p>
+            <div class="aviso-titulo" data-i18n="avi1.titulo">La facturación va por fuera</div>
+            <p class="aviso-texto" data-i18n="avi1.texto">MiCaja lleva tus ventas, tu inventario y tu caja. No emite CFDI ni se conecta con el SAT, así que la parte fiscal la sigues llevando por donde ya la llevas hoy.</p>
           </div>
         </div>
         <div class="aviso-item">
           <span class="aviso-icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
           <div>
-            <div class="aviso-titulo">Tus datos viven en tu negocio</div>
-            <p class="aviso-texto">No hay servidor externo ni suscripción mensual: todo está en la computadora de tu mostrador. A cambio, el respaldo queda de tu lado.</p>
+            <div class="aviso-titulo" data-i18n="avi2.titulo">Tus datos viven en tu negocio</div>
+            <p class="aviso-texto" data-i18n="avi2.texto">No hay servidor externo ni suscripción mensual: todo está en la computadora de tu mostrador. A cambio, el respaldo queda de tu lado.</p>
           </div>
         </div>
         <div class="aviso-item">
           <span class="aviso-icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
           <div>
-            <div class="aviso-titulo">En el celular entras por el navegador</div>
-            <p class="aviso-texto">No hay que bajar nada de la tienda de apps: se abre en el navegador, con tu mismo usuario y la misma información.</p>
+            <div class="aviso-titulo" data-i18n="avi3.titulo">En el celular entras por el navegador</div>
+            <p class="aviso-texto" data-i18n="avi3.texto">No hay que bajar nada de la tienda de apps: se abre en el navegador, con tu mismo usuario y la misma información.</p>
           </div>
         </div>
       </div>
@@ -336,28 +340,28 @@
   <section class="section section-alt">
     <div class="container">
       <div class="fade-in">
-        <h2 class="section-title">Preguntas que<br><em>nos hacen.</em></h2>
+        <h2 class="section-title" data-i18n="faq.title">Preguntas que<br><em>nos hacen.</em></h2>
       </div>
       <div class="faq fade-in">
         <div class="faq-item">
-          <div class="faq-pregunta">¿Sirve para mi giro?</div>
-          <p class="faq-respuesta">Si vendes productos con precio y existencias, sí. Hoy está corriendo en papelerías y abarrotes, y se usa igual en fruterías, ferreterías o panaderías. Puedes vender por pieza, por kilo, o las dos cosas en el mismo ticket.</p>
+          <div class="faq-pregunta" data-i18n="faq1.p">¿Sirve para mi giro?</div>
+          <p class="faq-respuesta" data-i18n="faq1.r">Si vendes productos con precio y existencias, sí. Hoy está corriendo en papelerías y abarrotes, y se usa igual en fruterías, ferreterías o panaderías. Puedes vender por pieza, por kilo, o las dos cosas en el mismo ticket.</p>
         </div>
         <div class="faq-item">
-          <div class="faq-pregunta">¿Puedo usarlo en más de una computadora?</div>
-          <p class="faq-respuesta">Sí. Todos los equipos de la red del negocio ven el mismo sistema: la caja del mostrador, una tablet en el pasillo y la computadora de la oficina trabajan sobre los mismos productos y las mismas ventas, al mismo tiempo.</p>
+          <div class="faq-pregunta" data-i18n="faq2.p">¿Puedo usarlo en más de una computadora?</div>
+          <p class="faq-respuesta" data-i18n="faq2.r">Sí. Todos los equipos de la red del negocio ven el mismo sistema: la caja del mostrador, una tablet en el pasillo y la computadora de la oficina trabajan sobre los mismos productos y las mismas ventas, al mismo tiempo.</p>
         </div>
         <div class="faq-item">
-          <div class="faq-pregunta">¿Qué pasa si se descompone la computadora?</div>
-          <p class="faq-respuesta">MiCaja te deja descargar un respaldo completo y restaurarlo en otro equipo. Hacerlo de vez en cuando es la parte que te toca a ti.</p>
+          <div class="faq-pregunta" data-i18n="faq3.p">¿Qué pasa si se descompone la computadora?</div>
+          <p class="faq-respuesta" data-i18n="faq3.r">MiCaja te deja descargar un respaldo completo y restaurarlo en otro equipo. Hacerlo de vez en cuando es la parte que te toca a ti.</p>
         </div>
         <div class="faq-item">
-          <div class="faq-pregunta">¿El cajero puede borrar una venta para quedarse con el dinero?</div>
-          <p class="faq-respuesta">Puede cancelar un ticket, pero no desaparecerlo. La cancelación queda registrada con su nombre, la hora y el motivo, y la ves en el historial cuando revises el día.</p>
+          <div class="faq-pregunta" data-i18n="faq4.p">¿El cajero puede borrar una venta para quedarse con el dinero?</div>
+          <p class="faq-respuesta" data-i18n="faq4.r">Puede cancelar un ticket, pero no desaparecerlo. La cancelación queda registrada con su nombre, la hora y el motivo, y la ves en el historial cuando revises el día.</p>
         </div>
         <div class="faq-item">
-          <div class="faq-pregunta">¿Cómo lo instalo?</div>
-          <p class="faq-respuesta">La instalación la hacemos nosotros sobre tu equipo. El paso a paso de todo lo demás — desde el primer inicio de sesión hasta el cierre de caja diario — está en el <a href="manual.pdf" download>manual de usuario</a>, que puedes leer antes de decidirte.</p>
+          <div class="faq-pregunta" data-i18n="faq5.p">¿Cómo lo instalo?</div>
+          <p class="faq-respuesta" data-i18n="faq5.r">La instalación la hacemos nosotros sobre tu equipo. El paso a paso de todo lo demás — desde el primer inicio de sesión hasta el cierre de caja diario — está en el <a href="manual.pdf" download>manual de usuario</a>, que puedes leer antes de decidirte.</p>
         </div>
       </div>
     </div>
@@ -371,19 +375,19 @@
       <div class="manual-box fade-in">
         <div class="manual-box-corner"></div>
         <div>
-          <h2 class="manual-title">Manual de usuario<br>completo.</h2>
-          <p class="manual-desc">
+          <h2 class="manual-title" data-i18n="man.title">Manual de usuario<br>completo.</h2>
+          <p class="manual-desc" data-i18n="man.desc">
             Guía paso a paso para operar MiCaja — desde el primer inicio de sesión hasta el cierre de caja diario.
           </p>
           <div class="manual-meta">
-            <span class="manual-chip">PDF · Español</span>
-            <span class="manual-chip">Actualizado 2026</span>
+            <span class="manual-chip" data-i18n="man.chip1">PDF · Español</span>
+            <span class="manual-chip" data-i18n="man.chip2">Actualizado 2026</span>
           </div>
         </div>
         <div>
-          <a href="manual.pdf" download class="btn-primary" style="white-space: nowrap;">
+          <a href="manual.pdf" download class="btn-primary manual-btn">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Descargar Manual
+            <span data-i18n="man.btn">Descargar Manual</span>
           </a>
         </div>
       </div>
@@ -401,13 +405,15 @@
         </div>
         <a href="https://www.facebook.com/profile.php?id=61576392462341" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-ghost-sm">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-          Visítanos en Facebook
+          <span data-i18n="pie.fb">Visítanos en Facebook</span>
         </a>
-        <a href="terminos.html" class="footer-terms">Términos y Condiciones</a>
+        <a href="terminos.html" class="footer-terms" data-i18n="pie.terminos">Términos y Condiciones</a>
       </div>
     </div>
   </footer>
 
+  <script src="i18n-index.js"></script>
+  <script src="i18n.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

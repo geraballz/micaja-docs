@@ -145,6 +145,43 @@ nav {
   text-transform: uppercase;
 }
 
+/* ── Toggle de idioma (ES / EN) ──
+   Micro-etiqueta del POS: 700 / 0.1em / mayúsculas, igual que .nav-badge.
+   El segmento activo usa el par acento + acento-sutil que ya usa el badge. */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+}
+.lang-opt {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--muted);
+  padding: 8px 13px;
+  border-radius: var(--radius-pill);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+.lang-opt:hover { color: var(--fg-strong); }
+.lang-opt.is-active {
+  color: var(--accent);
+  background: var(--accent-subtle);
+  box-shadow: inset 0 0 0 1px var(--accent-border);
+}
+.lang-opt.is-active:hover { color: var(--accent-hover); }
+
 /* ── Hero ── */
 .hero {
   position: relative;
@@ -384,6 +421,8 @@ nav {
 }
 .manual-desc { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 420px; }
 .manual-meta { display: flex; align-items: center; gap: 20px; margin-top: 20px; }
+/* El CTA del manual no se parte: "Descargar Manual" / "Download Manual" */
+.manual-btn { white-space: nowrap; }
 .manual-chip {
   border-radius: var(--radius-pill);
   font-size: 11px;
@@ -421,6 +460,8 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 
 /* ── Terms view ── */
 #terms-view { display: none; position: relative; z-index: 1; padding: 48px 0 80px; }
+/* Envoltura de las páginas legales (terminos.html, privacidad.html) */
+.legal-wrap { position: relative; z-index: 1; padding: 48px 0 80px; }
 .terms-back {
   border-radius: var(--radius);
   display: inline-flex;
@@ -498,6 +539,19 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
   color: var(--muted);
   opacity: 0.6;
   text-align: center;
+}
+
+/* Aviso de traducción de los documentos legales. Va en los dos idiomas: el
+   inglés es de cortesía y la versión en español es la que rige. */
+.terms-doc .terms-nota-idioma {
+  margin-top: 20px;
+  padding: 12px 16px;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius);
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--fg);
 }
 
 /* ── Gallery ── */
@@ -869,6 +923,9 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
   .hero { padding: 80px 0 64px; }
   .feature-row { padding: 16px 0; }
 
+  /* Sin mouse el blanco de toque importa: el toggle crece de 31 a 35 px. */
+  .lang-opt { padding: 10px 15px; }
+
   /* Los dos botones quedaban apilados con anchos distintos y centrados.
      A ancho completo se leen como un par y crecen el área de toque. */
   .hero-actions { flex-direction: column; align-items: stretch; }
@@ -923,4 +980,6 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
   .gallery-zoom-icon    { transition: opacity 0.15s ease; }
   /* Lightbox */
   .lightbox-inner { transition: opacity 0.15s ease; }
+  /* Toggle de idioma */
+  .lang-opt { transition: none; }
 }
