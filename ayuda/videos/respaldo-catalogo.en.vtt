@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00:00.160 --> 00:00:03.229
+Your product catalog, in one file
+
+00:00:03.299 --> 00:00:08.690
+<b>Exportar catálogo</b> (export) downloads all your products with prices, stock and photos
+
+00:00:08.818 --> 00:00:13.650
+To load it on another register, or restore it, use <b>Importar catálogo</b> (import)
+
+00:00:13.790 --> 00:00:19.820
+MiCaja tells you how many products it has: it updates the ones you have and creates the new ones
+
+00:00:19.950 --> 00:00:27.902
+Importing never deletes anything. To back up the whole system, go to Configuración (settings)
