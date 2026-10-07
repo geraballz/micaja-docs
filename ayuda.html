@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de ayuda — MiCaja</title>
+  <meta name="description" content="Videos cortos para aprender a usar MiCaja: cobrar, inventario, crédito, corte de caja y más." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a href="#videos" class="skip-link" data-i18n="skip">Saltar al contenido</a>
+
+  <!-- Nav -->
+  <nav data-i18n-aria-label="nav.aria" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="poslogo.png" alt="MiCaja" onerror="this.style.display='none'" />
+        <span class="nav-logo-text">Mi<span>Caja</span></span>
+      </a>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" class="lang-opt is-active" data-lang="es" aria-pressed="true" lang="es">ES</button>
+        <button type="button" class="lang-opt" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado: el centrado es la excepción del hero, igual que en la portada -->
+  <section class="hero hero-ayuda">
+    <div class="glow"></div>
+    <div class="container">
+      <div class="hero-eyebrow" data-i18n="ayuda.eyebrow">Centro de ayuda</div>
+      <h1 class="hero-title" data-i18n="ayuda.title">Aprende a usar <em>MiCaja</em></h1>
+      <p class="hero-subtitle" data-i18n="ayuda.sub">
+        Un video corto para cada cosa que haces en la caja. Menos de un minuto cada uno.
+      </p>
+      <div class="ayuda-buscador">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" id="ayuda-buscar" autocomplete="off"
+          placeholder="Busca: corte, crédito, devolución…" aria-label="Buscar un video"
+          data-i18n-placeholder="ayuda.buscar" data-i18n-aria-label="ayuda.buscar.aria" />
+      </div>
+<!-- INDICE:INICIO -->
+    <ul class="ayuda-indice">
+      <li><a href="#punto-de-venta" data-i18n="s.punto-de-venta">Punto de venta</a></li>
+      <li><a href="#inventario" data-i18n="s.inventario">Inventario</a></li>
+      <li><a href="#proveedores-y-clientes" data-i18n="s.proveedores-y-clientes">Proveedores y clientes</a></li>
+      <li><a href="#dashboard" data-i18n="s.dashboard">Dashboard</a></li>
+      <li><a href="#caja" data-i18n="s.caja">Caja</a></li>
+      <li><a href="#tickets" data-i18n="s.tickets">Tickets</a></li>
+      <li><a href="#administracion" data-i18n="s.administracion">Administración</a></li>
+    </ul>
+  <!-- INDICE:FIN -->
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <main id="videos">
+<!-- AYUDA:INICIO -->
+  <section class="section ayuda-seccion" id="punto-de-venta">
+    <div class="container">
+      <h2 class="section-title" data-i18n="s.punto-de-venta">Punto de venta</h2>
+      <div class="ayuda-grid">
+        <article class="ayuda-video fade-in" id="cobrar-venta" data-buscar-es="cobrar una venta como cobrar una venta en micaja busca el producto por su nombre, o escanea su codigo de barras cada producto que tocas se suma al carrito ¿se lleva dos? cambia la cantidad aqui escribe con cuanto te pagan y micaja calcula el cambio cobra, y el ticket sale solo en la impresora" data-buscar-en="ring up a sale how to ring up a sale in micaja search the product by name, or scan its barcode every product you tap goes into the cart taking two? change the quantity here type how much they pay you and micaja works out the change check out, and the ticket prints on its own">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/cobrar-venta.jpg">
+            <source src="ayuda/videos/cobrar-venta.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/cobrar-venta.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/cobrar-venta.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.cobrar-venta.titulo">Cobrar una venta</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.cobrar-venta.desc">Cómo cobrar una venta en MiCaja</span> · <span data-i18n="v.cobrar-venta.min">31 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.cobrar-venta.f0">Cómo <strong>cobrar una venta</strong> en MiCaja</p>
+              <p data-i18n="v.cobrar-venta.f1">Busca el producto por su nombre, o escanea su código de barras</p>
+              <p data-i18n="v.cobrar-venta.f2">Cada producto que tocas se suma al carrito</p>
+              <p data-i18n="v.cobrar-venta.f3">¿Se lleva dos? Cambia la cantidad aquí</p>
+              <p data-i18n="v.cobrar-venta.f4">Escribe con cuánto te pagan y MiCaja calcula el <strong>cambio</strong></p>
+              <p data-i18n="v.cobrar-venta.f5">Cobra, y el ticket sale solo en la impresora</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="buscar-y-filtrar" data-buscar-es="buscar y filtrar productos como encontrar un producto en segundos escribe como en el mostrador: sin acentos tambien encuentra los que si llevan y si se te va una letra, igual lo encuentra el codigo de barras tambien sirve: el lector lo escribe aqui y aparece el producto o explora por categoria con la vista de fotos, los reconoces de un vistazo" data-buscar-en="search and filter products how to find a product in seconds type the way you do at the counter: no accents still finds the ones that do have them and if you miss a letter, it still finds it the barcode works too: the scanner types it here and the product shows up or browse by category with photo view, you recognize them at a glance">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/buscar-y-filtrar.jpg">
+            <source src="ayuda/videos/buscar-y-filtrar.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/buscar-y-filtrar.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/buscar-y-filtrar.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.buscar-y-filtrar.titulo">Buscar y filtrar productos</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.buscar-y-filtrar.desc">Cómo encontrar un producto en segundos</span> · <span data-i18n="v.buscar-y-filtrar.min">29 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.buscar-y-filtrar.f0">Cómo <strong>encontrar un producto</strong> en segundos</p>
+              <p data-i18n="v.buscar-y-filtrar.f1">Escribe como en el mostrador: sin acentos también encuentra los que <strong>sí</strong> llevan</p>
+              <p data-i18n="v.buscar-y-filtrar.f2">Y si se te va una letra, igual lo encuentra</p>
+              <p data-i18n="v.buscar-y-filtrar.f3">El <strong>código de barras</strong> también sirve: el lector lo escribe aquí y aparece el producto</p>
+              <p data-i18n="v.buscar-y-filtrar.f4">O explora por <strong>categoría</strong></p>
+              <p data-i18n="v.buscar-y-filtrar.f5">Con la <strong>vista de fotos</strong>, los reconoces de un vistazo</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="pago-electronico-y-cliente" data-buscar-es="pago electronico y venta a nombre de un cliente cobrar con tarjeta o transferencia, y a nombre de un cliente si te pagan con tarjeta o transferencia, elige electronico si quieres, anota el folio del pago para encontrarlo despues ¿quieres saber que compra cada cliente? agregalo a la venta ¿es nuevo? lo registras ahi mismo, sin salir de la venta cobra, y la venta queda en el historial de tu cliente" data-buscar-en="card payment and selling to a customer charge by card or transfer, and to a customer if they pay by card or transfer, choose electronico (electronic) if you want, write down the payment reference to find it later want to know what each customer buys? add them to the sale new customer? register them right there, without leaving the sale check out, and the sale goes into your customer's history">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/pago-electronico-y-cliente.jpg">
+            <source src="ayuda/videos/pago-electronico-y-cliente.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/pago-electronico-y-cliente.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/pago-electronico-y-cliente.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.pago-electronico-y-cliente.titulo">Pago electrónico y venta a nombre de un cliente</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.pago-electronico-y-cliente.desc">Cobrar con tarjeta o transferencia, y a nombre de un cliente</span> · <span data-i18n="v.pago-electronico-y-cliente.min">35 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.pago-electronico-y-cliente.f0">Cobrar con <strong>tarjeta o transferencia</strong>, y a nombre de un cliente</p>
+              <p data-i18n="v.pago-electronico-y-cliente.f1">Si te pagan con tarjeta o transferencia, elige <strong>Electrónico</strong></p>
+              <p data-i18n="v.pago-electronico-y-cliente.f2">Si quieres, anota el folio del pago para encontrarlo después</p>
+              <p data-i18n="v.pago-electronico-y-cliente.f3">¿Quieres saber qué compra cada cliente? Agrégalo a la venta</p>
+              <p data-i18n="v.pago-electronico-y-cliente.f4">¿Es nuevo? Lo registras ahí mismo, sin salir de la venta</p>
+              <p data-i18n="v.pago-electronico-y-cliente.f5">Cobra, y la venta queda en el <strong>historial</strong> de tu cliente</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="carritos-guardados" data-buscar-es="carritos guardados atiende a otro cliente sin perder una venta a medias ¿tu cliente fue por algo que olvido? guarda el carrito con su nombre mientras, atiendes al siguiente como siempre cuando regresa, abre tus carritos guardados y su venta sigue justo donde la dejaste" data-buscar-en="saved carts serve another customer without losing a sale in progress customer went back for something they forgot? save the cart with their name meanwhile, you serve the next one as usual when they come back, open your saved carts and their sale is right where you left it">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/carritos-guardados.jpg">
+            <source src="ayuda/videos/carritos-guardados.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/carritos-guardados.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/carritos-guardados.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.carritos-guardados.titulo">Carritos guardados</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.carritos-guardados.desc">Atiende a otro cliente sin perder una venta a medias</span> · <span data-i18n="v.carritos-guardados.min">36 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.carritos-guardados.f0">Atiende a otro cliente <strong>sin perder</strong> una venta a medias</p>
+              <p data-i18n="v.carritos-guardados.f1">¿Tu cliente fue por algo que olvidó? <strong>Guarda</strong> el carrito con su nombre</p>
+              <p data-i18n="v.carritos-guardados.f2">Mientras, atiendes al siguiente como siempre</p>
+              <p data-i18n="v.carritos-guardados.f3">Cuando regresa, abre tus <strong>carritos guardados</strong></p>
+              <p data-i18n="v.carritos-guardados.f4">Y su venta sigue justo donde la dejaste</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="venta-por-kg" data-buscar-es="venta por peso como vender por kilo al tocar un producto por kilo, se abre la captura del peso con bascula conectada, el peso llega solo sin bascula, lo tecleas: 3, 5, 0 son 350 gramos micaja calcula el precio y lo agrega al carrito" data-buscar-en="selling by weight how to sell by the kilo when you tap a product sold by kilo, the weight entry opens with a scale connected, the weight comes in on its own without a scale, type it: 3, 5, 0 is 350 grams micaja works out the price and adds it to the cart">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/venta-por-kg.jpg">
+            <source src="ayuda/videos/venta-por-kg.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/venta-por-kg.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/venta-por-kg.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.venta-por-kg.titulo">Venta por peso</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.venta-por-kg.desc">Cómo vender por kilo</span> · <span data-i18n="v.venta-por-kg.min">23 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.venta-por-kg.f0">Cómo vender <strong>por kilo</strong></p>
+              <p data-i18n="v.venta-por-kg.f1">Al tocar un producto por kilo, se abre la captura del peso</p>
+              <p data-i18n="v.venta-por-kg.f2">Con báscula conectada, el peso llega solo</p>
+              <p data-i18n="v.venta-por-kg.f3">Sin báscula, lo tecleas: 3, 5, 0 son <strong>350 gramos</strong></p>
+              <p data-i18n="v.venta-por-kg.f4">MiCaja calcula el precio y lo agrega al carrito</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="venta-credito" data-buscar-es="vender a credito como vender a credito: tu cliente se lleva hoy y paga despues arma la venta como siempre elige credito y a quien se le vende busca a tu cliente por nombre o telefono si deja un enganche, anotalo: micaja te dice cuanto queda a credito vender a credito pide el pin del administrador listo: la deuda queda a nombre de tu cliente, y la cobras cuando regrese" data-buscar-en="sell on credit how to sell on credit: your customer takes it today and pays later build the sale as usual choose credito (credit) and who you are selling to find your customer by name or phone if they leave a down payment, enter it: micaja shows how much is left on credit selling on credit asks for the administrator's pin done: the debt is under your customer's name, and you collect it when they come back">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/venta-credito.jpg">
+            <source src="ayuda/videos/venta-credito.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/venta-credito.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/venta-credito.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.venta-credito.titulo">Vender a crédito</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.venta-credito.desc">Cómo vender a crédito: tu cliente se lleva hoy y paga después</span> · <span data-i18n="v.venta-credito.min">51 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.venta-credito.f0">Cómo <strong>vender a crédito</strong>: tu cliente se lleva hoy y paga después</p>
+              <p data-i18n="v.venta-credito.f1">Arma la venta como siempre</p>
+              <p data-i18n="v.venta-credito.f2">Elige <strong>Crédito</strong> y a quién se le vende</p>
+              <p data-i18n="v.venta-credito.f3">Busca a tu cliente por nombre o teléfono</p>
+              <p data-i18n="v.venta-credito.f4">Si deja un <strong>enganche</strong>, anótalo: MiCaja te dice cuánto queda a crédito</p>
+              <p data-i18n="v.venta-credito.f5">Vender a crédito pide el <strong>PIN del administrador</strong></p>
+              <p data-i18n="v.venta-credito.f6">Listo: la deuda queda a nombre de tu cliente, y la cobras cuando regrese</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="cobrar-credito" data-buscar-es="cobrar un credito cuando tu cliente viene a pagar, toca cobrar credito arriba aparecen quienes deben, con cuanto y desde cuando ves cada compra que tiene pendiente; elige la que va a pagar puede abonar lo que traiga, o liquidar todo de una vez cobra, y micaja imprime su comprobante con el saldo que le queda" data-buscar-en="collect a credit when your customer comes to pay, tap cobrar credito (collect credit) at the top are the people who owe, how much and since when see each pending purchase; choose the one they are paying they can pay part of it, or pay it all off at once collect it, and micaja prints a receipt with their remaining balance">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/cobrar-credito.jpg">
+            <source src="ayuda/videos/cobrar-credito.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/cobrar-credito.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/cobrar-credito.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.cobrar-credito.titulo">Cobrar un crédito</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.cobrar-credito.desc">Cuando tu cliente viene a pagar, toca Cobrar crédito</span> · <span data-i18n="v.cobrar-credito.min">23 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.cobrar-credito.f0">Cuando tu cliente viene a pagar, toca <strong>Cobrar crédito</strong></p>
+              <p data-i18n="v.cobrar-credito.f1">Arriba aparecen quienes deben, con cuánto y desde cuándo</p>
+              <p data-i18n="v.cobrar-credito.f2">Ves cada compra que tiene pendiente; elige la que va a pagar</p>
+              <p data-i18n="v.cobrar-credito.f3">Puede <strong>abonar</strong> lo que traiga, o <strong>liquidar</strong> todo de una vez</p>
+              <p data-i18n="v.cobrar-credito.f4">Cobra, y MiCaja imprime su comprobante con el saldo que le queda</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="estadisticas-pos" data-buscar-es="la barra de estadisticas del pos la barra de arriba te dice como va el dia las cifras vienen ocultas por si el cliente ve la pantalla; toca el ojo para verlas lo que llevas vendido hoy, y en cuantas ventas stock bajo te avisa lo que se esta acabando manda la lista por whatsapp como texto, o como pdf, para pedir a tu proveedor y cada producto te avisa cuando le quedan pocas piezas" data-buscar-en="the register stats bar the bar at the top tells you how the day is going the numbers are hidden in case a customer sees the screen; tap the eye to show them what you have sold today, and in how many sales stock bajo (low stock) warns you about what is running out send the list on whatsapp as text or as a pdf to order from your supplier and each product warns you when only a few are left">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/estadisticas-pos.jpg">
+            <source src="ayuda/videos/estadisticas-pos.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/estadisticas-pos.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/estadisticas-pos.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.estadisticas-pos.titulo">La barra de estadísticas del POS</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.estadisticas-pos.desc">La barra de arriba te dice cómo va el día</span> · <span data-i18n="v.estadisticas-pos.min">26 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.estadisticas-pos.f0">La barra de arriba te dice <strong>cómo va el día</strong></p>
+              <p data-i18n="v.estadisticas-pos.f1">Las cifras vienen ocultas por si el cliente ve la pantalla; toca el ojo para verlas</p>
+              <p data-i18n="v.estadisticas-pos.f2">Lo que llevas vendido hoy, y en cuántas ventas</p>
+              <p data-i18n="v.estadisticas-pos.f3"><strong>Stock bajo</strong> te avisa lo que se está acabando</p>
+              <p data-i18n="v.estadisticas-pos.f4">Manda la lista por WhatsApp como texto, o como PDF, para pedir a tu proveedor</p>
+              <p data-i18n="v.estadisticas-pos.f5">Y cada producto te avisa cuando le quedan pocas piezas</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="pos-movil" data-buscar-es="micaja en el celular micaja tambien cobra desde el celular busca y toca: el producto se suma sin salir de la lista abajo ves siempre cuanto llevas tocala y se abre el carrito para cobrar escribe con cuanto te pagan, y cobra en el menu tienes la caja: cobrar creditos, egresos y el corte" data-buscar-en="micaja on your phone micaja also checks out from your phone search and tap: the product is added without leaving the list at the bottom you always see your running total tap it and the cart opens to check out type how much they pay you, and check out the menu has the cash tools: collect credit, expenses and the cash count">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/pos-movil.jpg">
+            <source src="ayuda/videos/pos-movil.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/pos-movil.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/pos-movil.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.pos-movil.titulo">MiCaja en el celular</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.pos-movil.desc">MiCaja también cobra desde el celular</span> · <span data-i18n="v.pos-movil.min">31 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.pos-movil.f0">MiCaja también <strong>cobra desde el celular</strong></p>
+              <p data-i18n="v.pos-movil.f1">Busca y toca: el producto se suma sin salir de la lista</p>
+              <p data-i18n="v.pos-movil.f2">Abajo ves siempre cuánto llevas</p>
+              <p data-i18n="v.pos-movil.f3">Tócala y se abre el carrito para cobrar</p>
+              <p data-i18n="v.pos-movil.f4">Escribe con cuánto te pagan, y cobra</p>
+              <p data-i18n="v.pos-movil.f5">En el menú tienes la caja: cobrar créditos, egresos y el corte</p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt ayuda-seccion" id="inventario">
+    <div class="container">
+      <h2 class="section-title" data-i18n="s.inventario">Inventario</h2>
+      <div class="ayuda-grid">
+        <article class="ayuda-video fade-in" id="alta-producto" data-buscar-es="dar de alta un producto como dar de alta un producto nuevo escanea su codigo de barras, o deja que micaja genere uno ponle nombre y categoria agregale una foto: desde la computadora o con la camara del celular encuadrala como quieras antes de guardarla precio de compra, precio de venta y cuantas tienes guarda, y ya puedes venderlo" data-buscar-en="add a product how to add a new product scan its barcode, or let micaja generate one give it a name and a category add a photo: from the computer or with your phone camera frame it the way you want before saving cost price, selling price and how many you have save it, and it is ready to sell">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/alta-producto.jpg">
+            <source src="ayuda/videos/alta-producto.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/alta-producto.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/alta-producto.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.alta-producto.titulo">Dar de alta un producto</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.alta-producto.desc">Cómo dar de alta un producto nuevo</span> · <span data-i18n="v.alta-producto.min">35 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.alta-producto.f0">Cómo <strong>dar de alta un producto</strong> nuevo</p>
+              <p data-i18n="v.alta-producto.f1">Escanea su código de barras, o deja que MiCaja genere uno</p>
+              <p data-i18n="v.alta-producto.f2">Ponle nombre y categoría</p>
+              <p data-i18n="v.alta-producto.f3">Agrégale una foto: desde la computadora o con la cámara del celular</p>
+              <p data-i18n="v.alta-producto.f4">Encuádrala como quieras antes de guardarla</p>
+              <p data-i18n="v.alta-producto.f5">Precio de compra, precio de venta y cuántas tienes</p>
+              <p data-i18n="v.alta-producto.f6">Guarda, y ya puedes venderlo</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="precio-mayoreo" data-buscar-es="precio de mayoreo precio de mayoreo: si se lleva muchas, paga menos por cada una abre el producto en inventario activa el precio de mayoreo escribe desde cuantas piezas aplica, y a cuanto cada una guarda, y la regla queda lista en la caja no tienes que acordarte de nada al llegar a 25, todas pasan solas a $2.50" data-buscar-en="wholesale price wholesale price: buy many, pay less for each one open the product in inventario (inventory) turn on the wholesale price type from how many pieces it applies, and the price for each save, and the rule is set at the register you don't have to remember anything at 25, all of them switch to $2.50 on their own">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/precio-mayoreo.jpg">
+            <source src="ayuda/videos/precio-mayoreo.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/precio-mayoreo.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/precio-mayoreo.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.precio-mayoreo.titulo">Precio de mayoreo</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.precio-mayoreo.desc">Precio de mayoreo: si se lleva muchas, paga menos por cada una</span> · <span data-i18n="v.precio-mayoreo.min">36 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.precio-mayoreo.f0"><strong>Precio de mayoreo</strong>: si se lleva muchas, paga menos por cada una</p>
+              <p data-i18n="v.precio-mayoreo.f1">Abre el producto en Inventario</p>
+              <p data-i18n="v.precio-mayoreo.f2">Activa el precio de mayoreo</p>
+              <p data-i18n="v.precio-mayoreo.f3">Escribe desde cuántas piezas aplica, y a cuánto cada una</p>
+              <p data-i18n="v.precio-mayoreo.f4">Guarda, y la regla queda lista</p>
+              <p data-i18n="v.precio-mayoreo.f5">En la caja no tienes que acordarte de nada</p>
+              <p data-i18n="v.precio-mayoreo.f6">Al llegar a <strong>25</strong>, todas pasan solas a <strong>$2.50</strong></p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="editar-producto" data-buscar-es="editar un producto como cambiar un precio o sumar mercancia para cambiar el precio, tocalo en la tabla escribe el nuevo y presiona enter: se guarda al momento para lo demas, abre editar ¿llego mercancia? escribe cuantas llegaron y micaja las suma guarda, y el inventario queda al dia" data-buscar-en="edit a product how to change a price or add stock to change the price, tap it in the table type the new one and press enter: it saves right away for everything else, open editar (edit) new stock arrived? type how many and micaja adds them up save, and your inventory is up to date">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/editar-producto.jpg">
+            <source src="ayuda/videos/editar-producto.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/editar-producto.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/editar-producto.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.editar-producto.titulo">Editar un producto</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.editar-producto.desc">Cómo cambiar un precio o sumar mercancía</span> · <span data-i18n="v.editar-producto.min">53 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.editar-producto.f0">Cómo <strong>cambiar un precio</strong> o <strong>sumar mercancía</strong></p>
+              <p data-i18n="v.editar-producto.f1">Para cambiar el precio, tócalo en la tabla</p>
+              <p data-i18n="v.editar-producto.f2">Escribe el nuevo y presiona Enter: se guarda al momento</p>
+              <p data-i18n="v.editar-producto.f3">Para lo demás, abre <strong>Editar</strong></p>
+              <p data-i18n="v.editar-producto.f4">¿Llegó mercancía? Escribe cuántas llegaron y MiCaja las suma</p>
+              <p data-i18n="v.editar-producto.f5">Guarda, y el inventario queda al día</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="precio-rapido" data-buscar-es="cambiar un precio desde la caja ¿subio el proveedor? cambia el precio desde la caja abre los detalles del producto toca actualizar precio el cajero necesita el pin del administrador escribe el precio nuevo y guarda desde ya se cobra con el precio nuevo" data-buscar-en="change a price from the register supplier raised prices? change the price from the register open the product details tap actualizar precio (update price) the cashier needs the administrator's pin type the new price and save from now on it rings up at the new price">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/precio-rapido.jpg">
+            <source src="ayuda/videos/precio-rapido.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/precio-rapido.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/precio-rapido.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.precio-rapido.titulo">Cambiar un precio desde la caja</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.precio-rapido.desc">¿Subió el proveedor? Cambia el precio desde la caja</span> · <span data-i18n="v.precio-rapido.min">20 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.precio-rapido.f0">¿Subió el proveedor? Cambia el precio <strong>desde la caja</strong></p>
+              <p data-i18n="v.precio-rapido.f1">Abre los detalles del producto</p>
+              <p data-i18n="v.precio-rapido.f2">Toca <strong>Actualizar precio</strong></p>
+              <p data-i18n="v.precio-rapido.f3">El cajero necesita el PIN del administrador</p>
+              <p data-i18n="v.precio-rapido.f4">Escribe el precio nuevo y guarda</p>
+              <p data-i18n="v.precio-rapido.f5">Desde ya se cobra con el precio nuevo</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="eliminar-producto" data-buscar-es="eliminar un producto ¿un producto que ya no vas a vender? eliminalo buscalo en inventario toca el bote de basura micaja te pide confirmar, para que no se borre por accidente deja de aparecer en la caja, pero tus ventas pasadas lo conservan" data-buscar-en="delete a product a product you won't sell anymore? delete it find it in inventario (inventory) tap the trash can micaja asks you to confirm, so nothing is deleted by accident it no longer shows at the register, but your past sales keep it">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/eliminar-producto.jpg">
+            <source src="ayuda/videos/eliminar-producto.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/eliminar-producto.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/eliminar-producto.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.eliminar-producto.titulo">Eliminar un producto</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.eliminar-producto.desc">¿Un producto que ya no vas a vender? Elimínalo</span> · <span data-i18n="v.eliminar-producto.min">19 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.eliminar-producto.f0">¿Un producto que ya no vas a vender? <strong>Elimínalo</strong></p>
+              <p data-i18n="v.eliminar-producto.f1">Búscalo en Inventario</p>
+              <p data-i18n="v.eliminar-producto.f2">Toca el bote de basura</p>
+              <p data-i18n="v.eliminar-producto.f3">MiCaja te pide confirmar, para que no se borre por accidente</p>
+              <p data-i18n="v.eliminar-producto.f4">Deja de aparecer en la caja, pero tus ventas pasadas lo conservan</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="sin-movimiento" data-buscar-es="productos sin movimiento ¿que tienes en el anaquel que no se vende? toca sin movimiento ves cuanto dinero tienes parado en mercancia que no sale y la lista de esos productos, para rematarlos o dejar de pedirlos" data-buscar-en="products that are not moving what's on your shelf that isn't selling? tap sin movimiento (no movement) see how much money is tied up in stock that does not sell and the list of those products, to put them on sale or stop ordering them">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/sin-movimiento.jpg">
+            <source src="ayuda/videos/sin-movimiento.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/sin-movimiento.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/sin-movimiento.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.sin-movimiento.titulo">Productos sin movimiento</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.sin-movimiento.desc">¿Qué tienes en el anaquel que no se vende?</span> · <span data-i18n="v.sin-movimiento.min">15 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.sin-movimiento.f0">¿Qué tienes en el anaquel que <strong>no se vende</strong>?</p>
+              <p data-i18n="v.sin-movimiento.f1">Toca <strong>Sin movimiento</strong></p>
+              <p data-i18n="v.sin-movimiento.f2">Ves cuánto dinero tienes parado en mercancía que no sale</p>
+              <p data-i18n="v.sin-movimiento.f3">Y la lista de esos productos, para rematarlos o dejar de pedirlos</p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ayuda-seccion" id="proveedores-y-clientes">
+    <div class="container">
+      <h2 class="section-title" data-i18n="s.proveedores-y-clientes">Proveedores y clientes</h2>
+      <div class="ayuda-grid">
+        <article class="ayuda-video fade-in" id="proveedores" data-buscar-es="proveedores ten a la mano a quien le compras cada cosa da de alta a tu proveedor con su telefono guarda, y ya esta en tu directorio en cada producto eliges quien te lo surte asi, cuando algo se acaba, sabes a quien llamar" data-buscar-en="suppliers keep track of who you buy each thing from add your supplier with their phone number save, and it's in your directory on each product you choose who supplies it so when something runs out, you know who to call">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/proveedores.jpg">
+            <source src="ayuda/videos/proveedores.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/proveedores.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/proveedores.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.proveedores.titulo">Proveedores</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.proveedores.desc">Ten a la mano a quién le compras cada cosa</span> · <span data-i18n="v.proveedores.min">29 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.proveedores.f0">Ten a la mano <strong>a quién le compras</strong> cada cosa</p>
+              <p data-i18n="v.proveedores.f1">Da de alta a tu proveedor con su teléfono</p>
+              <p data-i18n="v.proveedores.f2">Guarda, y ya está en tu directorio</p>
+              <p data-i18n="v.proveedores.f3">En cada producto eliges quién te lo surte</p>
+              <p data-i18n="v.proveedores.f4">Así, cuando algo se acaba, sabes a quién llamar</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="clientes" data-buscar-es="clientes tu directorio de clientes, con lo que compra cada uno con saldo te muestra solo a quienes te deben ves cuanto debe, desde cuando, y su ultimo pago bajale su estado de cuenta como imagen, para mandarselo por whatsapp y en historial, todas sus compras cada ticket con lo que se llevo, sus pagos y lo que queda por cobrar" data-buscar-en="customers your customer directory, with what each one buys con saldo (with balance) shows only the ones who owe you see how much they owe, since when, and their last payment download their account statement as an image to send it on whatsapp and in historial (history), all their purchases each ticket with what they took, their payments and what is left to collect">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/clientes.jpg">
+            <source src="ayuda/videos/clientes.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/clientes.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/clientes.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.clientes.titulo">Clientes</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.clientes.desc">Tu directorio de clientes, con lo que compra cada uno</span> · <span data-i18n="v.clientes.min">25 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.clientes.f0">Tu <strong>directorio de clientes</strong>, con lo que compra cada uno</p>
+              <p data-i18n="v.clientes.f1"><strong>Con saldo</strong> te muestra solo a quienes te deben</p>
+              <p data-i18n="v.clientes.f2">Ves cuánto debe, desde cuándo, y su último pago</p>
+              <p data-i18n="v.clientes.f3">Bájale su <strong>estado de cuenta</strong> como imagen, para mandárselo por WhatsApp</p>
+              <p data-i18n="v.clientes.f4">Y en <strong>Historial</strong>, todas sus compras</p>
+              <p data-i18n="v.clientes.f5">Cada ticket con lo que se llevó, sus pagos y lo que queda por cobrar</p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt ayuda-seccion" id="dashboard">
+    <div class="container">
+      <h2 class="section-title" data-i18n="s.dashboard">Dashboard</h2>
+      <div class="ayuda-grid">
+        <article class="ayuda-video fade-in" id="dashboard" data-buscar-es="el dashboard el dashboard: como va tu negocio, de un vistazo arriba, un resumen de tus ultimos 7 dias, escrito como te lo contaria alguien las cifras de hoy: ventas, ingresos, ganancia y lo que salio de la caja ¿dudas con una cifra? el icono de informacion te explica como se calcula tus ventas y ganancias, dia por dia como te pagan, y cuanto vendio cada cajero cambia a 6 o 12 meses para ver la tendencia" data-buscar-en="the dashboard the dashboard: how your business is doing, at a glance at the top, a summary of your last 7 days, written the way someone would tell you today's numbers: sales, income, profit and what left the drawer not sure about a number? the info icon explains how it is calculated your sales and profit, day by day how you get paid, and how much each cashier sold switch to 6 or 12 months to see the trend">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/dashboard.jpg">
+            <source src="ayuda/videos/dashboard.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/dashboard.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/dashboard.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.dashboard.titulo">El dashboard</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.dashboard.desc">El dashboard: cómo va tu negocio, de un vistazo</span> · <span data-i18n="v.dashboard.min">40 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.dashboard.f0">El <strong>dashboard</strong>: cómo va tu negocio, de un vistazo</p>
+              <p data-i18n="v.dashboard.f1">Arriba, un <strong>resumen</strong> de tus últimos 7 días, escrito como te lo contaría alguien</p>
+              <p data-i18n="v.dashboard.f2">Las cifras de hoy: ventas, ingresos, ganancia y lo que salió de la caja</p>
+              <p data-i18n="v.dashboard.f3">¿Dudas con una cifra? El ícono de información te explica cómo se calcula</p>
+              <p data-i18n="v.dashboard.f4">Tus ventas y ganancias, día por día</p>
+              <p data-i18n="v.dashboard.f5">Cómo te pagan, y cuánto vendió cada cajero</p>
+              <p data-i18n="v.dashboard.f6">Cambia a <strong>6 o 12 meses</strong> para ver la tendencia</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="dashboard-alertas" data-buscar-es="lo que el dashboard te avisa el dashboard tambien te avisa de lo que necesita tu atencion por cobrar: cuanto te deben, quien y desde hace cuantos dias lo que mas se vende se te acaba en: cuantos dias te dura cada producto al ritmo que lo vendes mandale la lista a tu proveedor desde aqui y lo que esta por caducar, para venderlo antes" data-buscar-en="what the dashboard warns you about the dashboard also warns you about what needs your attention por cobrar (to collect): how much you are owed, by whom and for how many days what sells the most se te acaba en (runs out in): how many days each product lasts at the pace you sell it send the list to your supplier from here and what is about to expire, so you sell it first">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/dashboard-alertas.jpg">
+            <source src="ayuda/videos/dashboard-alertas.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/dashboard-alertas.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/dashboard-alertas.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.dashboard-alertas.titulo">Lo que el dashboard te avisa</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.dashboard-alertas.desc">El dashboard también te avisa de lo que necesita tu atención</span> · <span data-i18n="v.dashboard-alertas.min">25 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.dashboard-alertas.f0">El dashboard también te <strong>avisa</strong> de lo que necesita tu atención</p>
+              <p data-i18n="v.dashboard-alertas.f1"><strong>Por cobrar</strong>: cuánto te deben, quién y desde hace cuántos días</p>
+              <p data-i18n="v.dashboard-alertas.f2">Lo que más se vende</p>
+              <p data-i18n="v.dashboard-alertas.f3"><strong>Se te acaba en</strong>: cuántos días te dura cada producto al ritmo que lo vendes</p>
+              <p data-i18n="v.dashboard-alertas.f4">Mándale la lista a tu proveedor desde aquí</p>
+              <p data-i18n="v.dashboard-alertas.f5">Y lo que está por caducar, para venderlo antes</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="exportar-csv" data-buscar-es="exportar ventas para tu contador ¿tu contador te pide las ventas del mes? toca csv arranca en el mes en curso, y te dice cuantas ventas y cuanto suman para otro periodo, eligelo en el calendario: por ejemplo, el mes pasado descarga el archivo y mandaselo: lo abre en excel" data-buscar-en="export sales for your accountant your accountant needs the month's sales? tap csv it starts on the current month and tells you how many sales and their total for another period, pick it in the calendar: for example, last month download the file and send it: it opens in excel">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/exportar-csv.jpg">
+            <source src="ayuda/videos/exportar-csv.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/exportar-csv.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/exportar-csv.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.exportar-csv.titulo">Exportar ventas para tu contador</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.exportar-csv.desc">¿Tu contador te pide las ventas del mes? Toca CSV</span> · <span data-i18n="v.exportar-csv.min">21 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.exportar-csv.f0">¿Tu contador te pide las ventas del mes? Toca <strong>CSV</strong></p>
+              <p data-i18n="v.exportar-csv.f1">Arranca en el mes en curso, y te dice cuántas ventas y cuánto suman</p>
+              <p data-i18n="v.exportar-csv.f2">Para otro período, elígelo en el calendario: por ejemplo, <strong>el mes pasado</strong></p>
+              <p data-i18n="v.exportar-csv.f3">Descarga el archivo y mándaselo: lo abre en Excel</p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ayuda-seccion" id="caja">
+    <div class="container">
+      <h2 class="section-title" data-i18n="s.caja">Caja</h2>
+      <div class="ayuda-grid">
+        <article class="ayuda-video fade-in" id="registrar-egreso" data-buscar-es="registrar un egreso ¿sacaste dinero de la caja? registralo escribe cuanto sacaste y para que: un pago, una compra, el garrafon registralo, y el corte de caja ya lo toma en cuenta en caja ves todos los egresos: cuando, quien y por que" data-buscar-en="record an expense took money out of the drawer? record it type how much you took and what for: a payment, a purchase, the water jug record it, and the cash count already takes it into account in caja (cash) you see every expense: when, who and why">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/registrar-egreso.jpg">
+            <source src="ayuda/videos/registrar-egreso.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/registrar-egreso.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/registrar-egreso.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.registrar-egreso.titulo">Registrar un egreso</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.registrar-egreso.desc">¿Sacaste dinero de la caja? Regístralo</span> · <span data-i18n="v.registrar-egreso.min">20 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.registrar-egreso.f0">¿Sacaste dinero de la caja? <strong>Regístralo</strong></p>
+              <p data-i18n="v.registrar-egreso.f1">Escribe cuánto sacaste</p>
+              <p data-i18n="v.registrar-egreso.f2">Y para qué: un pago, una compra, el garrafón</p>
+              <p data-i18n="v.registrar-egreso.f3">Regístralo, y el corte de caja ya lo toma en cuenta</p>
+              <p data-i18n="v.registrar-egreso.f4">En <strong>Caja</strong> ves todos los egresos: cuándo, quién y por qué</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="corte-de-caja" data-buscar-es="el corte de caja al cerrar el dia, haz tu corte de caja micaja te dice desde cuando es el corte, cuantas ventas hubo y el fondo con que empezaste cuenta los billetes y monedas del cajon escribe lo que contaste: micaja no te dice cuanto deberia haber, para que el conteo sea honesto y cuanto dejas de fondo para manana confirma, y te dice si cuadra, si sobra o si falta imprimelo para firmarlo y guardarlo con el dinero, o guardalo como imagen" data-buscar-en="the cash count at the end of the day, do your cash count micaja tells you the period, how many sales there were and the float you started with count the bills and coins in the drawer type what you counted: micaja doesn't tell you what should be there, so the count is honest and how much you leave as float for tomorrow confirm, and it tells you whether it balances, or is over or short print it to sign and keep with the money, or save it as an image">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/corte-de-caja.jpg">
+            <source src="ayuda/videos/corte-de-caja.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/corte-de-caja.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/corte-de-caja.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.corte-de-caja.titulo">El corte de caja</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.corte-de-caja.desc">Al cerrar el día, haz tu corte de caja</span> · <span data-i18n="v.corte-de-caja.min">35 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.corte-de-caja.f0">Al cerrar el día, haz tu <strong>corte de caja</strong></p>
+              <p data-i18n="v.corte-de-caja.f1">MiCaja te dice desde cuándo es el corte, cuántas ventas hubo y el fondo con que empezaste</p>
+              <p data-i18n="v.corte-de-caja.f2">Cuenta los billetes y monedas del cajón</p>
+              <p data-i18n="v.corte-de-caja.f3">Escribe lo que contaste: MiCaja <strong>no te dice</strong> cuánto debería haber, para que el conteo sea honesto</p>
+              <p data-i18n="v.corte-de-caja.f4">Y cuánto dejas de fondo para mañana</p>
+              <p data-i18n="v.corte-de-caja.f5">Confirma, y te dice si <strong>cuadra</strong>, si sobra o si falta</p>
+              <p data-i18n="v.corte-de-caja.f6">Imprímelo para firmarlo y guardarlo con el dinero, o guárdalo como imagen</p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt ayuda-seccion" id="tickets">
+    <div class="container">
+      <h2 class="section-title" data-i18n="s.tickets">Tickets</h2>
+      <div class="ayuda-grid">
+        <article class="ayuda-video fade-in" id="buscar-ticket" data-buscar-es="buscar y reimprimir un ticket todas tus ventas quedan en tickets cada una con la hora, quien la cobro, como te pagaron y que se llevo buscala por cliente, por cajero o por el codigo del ticket abrelo para verlo como salio impreso mandaselo a tu cliente por whatsapp con su numero o guardalo como imagen, o vuelve a imprimirlo en la termica" data-buscar-en="find and reprint a ticket every sale is kept in tickets each one with the time, who rang it up, how it was paid and what was sold search by customer, by cashier or by ticket code open it to see it exactly as it was printed send it to your customer on whatsapp with their number or save it as an image, or reprint it on the receipt printer">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/buscar-ticket.jpg">
+            <source src="ayuda/videos/buscar-ticket.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/buscar-ticket.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/buscar-ticket.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.buscar-ticket.titulo">Buscar y reimprimir un ticket</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.buscar-ticket.desc">Todas tus ventas quedan en Tickets</span> · <span data-i18n="v.buscar-ticket.min">27 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.buscar-ticket.f0">Todas tus ventas quedan en <strong>Tickets</strong></p>
+              <p data-i18n="v.buscar-ticket.f1">Cada una con la hora, quién la cobró, cómo te pagaron y qué se llevó</p>
+              <p data-i18n="v.buscar-ticket.f2">Búscala por cliente, por cajero o por el código del ticket</p>
+              <p data-i18n="v.buscar-ticket.f3">Ábrelo para verlo como salió impreso</p>
+              <p data-i18n="v.buscar-ticket.f4">Mándaselo a tu cliente por WhatsApp con su número</p>
+              <p data-i18n="v.buscar-ticket.f5">O guárdalo como imagen, o vuelve a imprimirlo en la térmica</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="devolucion" data-buscar-es="devoluciones ¿te regresan algo? hazlo desde tickets busca la venta y toca editar puedes cambiar un producto por otro, corregir la cantidad o devolverlo toca devolver en el producto que te regresan anota el motivo: queda registrado quien lo hizo y por que el stock regresa solo, y el corte de caja descuenta el dinero devuelto" data-buscar-en="returns someone returning something? do it from tickets find the sale and tap editar (edit) you can swap a product, fix the quantity or return it tap devolver (return) on the product they bring back write down the reason: it records who did it and why the stock goes back on its own, and the cash count deducts the refund">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/devolucion.jpg">
+            <source src="ayuda/videos/devolucion.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/devolucion.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/devolucion.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.devolucion.titulo">Devoluciones</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.devolucion.desc">¿Te regresan algo? Hazlo desde Tickets</span> · <span data-i18n="v.devolucion.min">26 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.devolucion.f0">¿Te regresan algo? Hazlo desde <strong>Tickets</strong></p>
+              <p data-i18n="v.devolucion.f1">Busca la venta y toca <strong>Editar</strong></p>
+              <p data-i18n="v.devolucion.f2">Puedes cambiar un producto por otro, corregir la cantidad o devolverlo</p>
+              <p data-i18n="v.devolucion.f3">Toca <strong>Devolver</strong> en el producto que te regresan</p>
+              <p data-i18n="v.devolucion.f4">Anota el motivo: queda registrado quién lo hizo y por qué</p>
+              <p data-i18n="v.devolucion.f5">El stock regresa solo, y el corte de caja descuenta el dinero devuelto</p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ayuda-seccion" id="administracion">
+    <div class="container">
+      <h2 class="section-title" data-i18n="s.administracion">Administración</h2>
+      <div class="ayuda-grid">
+        <article class="ayuda-video fade-in" id="etiquetas" data-buscar-es="etiquetas de precio imprime etiquetas con precio y codigo de barras elige el tamano de tu hoja de etiquetas ¿cambiaste precios hoy? filtra modificados hoy palomea las que quieres, o quita las que no y manda a imprimir: micaja te dice cuantas hojas vas a usar" data-buscar-en="price labels print labels with price and barcode choose the size of your label sheet changed prices today? filter modificados hoy (changed today) check the ones you want, or uncheck the ones you don't and print: micaja tells you how many sheets you will use">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/etiquetas.jpg">
+            <source src="ayuda/videos/etiquetas.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/etiquetas.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/etiquetas.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.etiquetas.titulo">Etiquetas de precio</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.etiquetas.desc">Imprime etiquetas con precio y código de barras</span> · <span data-i18n="v.etiquetas.min">20 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.etiquetas.f0">Imprime <strong>etiquetas</strong> con precio y código de barras</p>
+              <p data-i18n="v.etiquetas.f1">Elige el tamaño de tu hoja de etiquetas</p>
+              <p data-i18n="v.etiquetas.f2">¿Cambiaste precios hoy? Filtra <strong>Modificados hoy</strong></p>
+              <p data-i18n="v.etiquetas.f3">Palomea las que quieres, o quita las que no</p>
+              <p data-i18n="v.etiquetas.f4">Y manda a imprimir: MiCaja te dice cuántas hojas vas a usar</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="usuarios" data-buscar-es="dar de alta un cajero cada persona que cobra, con su propia cuenta toca nuevo cajero su nombre, su correo y una contrasena crealo, y ya puede entrar a cobrar asi cada venta dice quien la cobro, y el dashboard te muestra cuanto vendio cada uno" data-buscar-en="add a cashier everyone who rings up sales, with their own account tap nuevo cajero (new cashier) their name, their email and a password create it, and they can sign in to check out that way every sale shows who rang it up, and the dashboard shows how much each one sold">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/usuarios.jpg">
+            <source src="ayuda/videos/usuarios.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/usuarios.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/usuarios.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.usuarios.titulo">Dar de alta un cajero</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.usuarios.desc">Cada persona que cobra, con su propia cuenta</span> · <span data-i18n="v.usuarios.min">26 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.usuarios.f0">Cada persona que cobra, con <strong>su propia cuenta</strong></p>
+              <p data-i18n="v.usuarios.f1">Toca <strong>Nuevo cajero</strong></p>
+              <p data-i18n="v.usuarios.f2">Su nombre, su correo y una contraseña</p>
+              <p data-i18n="v.usuarios.f3">Créalo, y ya puede entrar a cobrar</p>
+              <p data-i18n="v.usuarios.f4">Así cada venta dice quién la cobró, y el dashboard te muestra cuánto vendió cada uno</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="configuracion" data-buscar-es="configuracion en configuracion pones tu negocio a tu medida el nombre de tu negocio, como sale arriba y en cada ticket lo ves al momento, antes de guardar tu telefono tambien sale en el ticket el pin que te pedira micaja para lo delicado: creditos, devoluciones y cambios de precio y aqui descargas el respaldo de todo tu sistema. hazlo seguido" data-buscar-en="settings in configuracion (settings) you make micaja fit your business your business name, as it appears at the top and on every ticket you see it right away, before saving your phone number also appears on the ticket the pin micaja asks for sensitive actions: credit, returns and price changes and here you download the backup of your whole system. do it often">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/configuracion.jpg">
+            <source src="ayuda/videos/configuracion.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/configuracion.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/configuracion.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.configuracion.titulo">Configuración</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.configuracion.desc">En Configuración pones tu negocio a tu medida</span> · <span data-i18n="v.configuracion.min">27 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.configuracion.f0">En <strong>Configuración</strong> pones tu negocio a tu medida</p>
+              <p data-i18n="v.configuracion.f1">El nombre de tu negocio, como sale arriba y en cada ticket</p>
+              <p data-i18n="v.configuracion.f2">Lo ves al momento, antes de guardar</p>
+              <p data-i18n="v.configuracion.f3">Tu teléfono también sale en el ticket</p>
+              <p data-i18n="v.configuracion.f4">El <strong>PIN</strong> que te pedirá MiCaja para lo delicado: créditos, devoluciones y cambios de precio</p>
+              <p data-i18n="v.configuracion.f5">Y aquí descargas el <strong>respaldo</strong> de todo tu sistema. Hazlo seguido</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="perfil-y-preferencias" data-buscar-es="tu perfil, el tema y el idioma tu cuenta esta en el boton con tu nombre en mi perfil ves y editas tus datos tema cambia entre claro y oscuro, como te acomode a la vista y micaja tambien habla ingles: cambialo aqui cada quien lo deja a su gusto en su propia caja" data-buscar-en="your profile, theme and language your account is on the button with your name in mi perfil (my profile) you see and edit your details tema (theme) switches between light and dark, whatever is easier on your eyes and micaja speaks english too: change it here everyone sets it up their own way on their own register">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/perfil-y-preferencias.jpg">
+            <source src="ayuda/videos/perfil-y-preferencias.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/perfil-y-preferencias.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/perfil-y-preferencias.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.perfil-y-preferencias.titulo">Tu perfil, el tema y el idioma</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.perfil-y-preferencias.desc">Tu cuenta está en el botón con tu nombre</span> · <span data-i18n="v.perfil-y-preferencias.min">19 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.perfil-y-preferencias.f0">Tu cuenta está en el botón con tu nombre</p>
+              <p data-i18n="v.perfil-y-preferencias.f1">En <strong>Mi perfil</strong> ves y editas tus datos</p>
+              <p data-i18n="v.perfil-y-preferencias.f2"><strong>Tema</strong> cambia entre claro y oscuro, como te acomode a la vista</p>
+              <p data-i18n="v.perfil-y-preferencias.f3">Y MiCaja también habla <strong>inglés</strong>: cámbialo aquí</p>
+              <p data-i18n="v.perfil-y-preferencias.f4">Cada quien lo deja a su gusto en su propia caja</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="perifericos" data-buscar-es="perifericos ¿no imprime? ¿no abre el cajon? revisa perifericos esta en el menu de tu cuenta te dice si micaja ve la impresora y la bascula desde aqui haces una prueba sin tener que vender nada" data-buscar-en="peripherals not printing? drawer won't open? check perifericos (peripherals) it's in your account menu it tells you whether micaja sees the printer and the scale from here you run a test without having to sell anything">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/perifericos.jpg">
+            <source src="ayuda/videos/perifericos.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/perifericos.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/perifericos.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.perifericos.titulo">Periféricos</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.perifericos.desc">¿No imprime? ¿No abre el cajón? Revisa Periféricos</span> · <span data-i18n="v.perifericos.min">16 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.perifericos.f0">¿No imprime? ¿No abre el cajón? Revisa <strong>Periféricos</strong></p>
+              <p data-i18n="v.perifericos.f1">Está en el menú de tu cuenta</p>
+              <p data-i18n="v.perifericos.f2">Te dice si MiCaja ve la impresora y la báscula</p>
+              <p data-i18n="v.perifericos.f3">Desde aquí haces una prueba sin tener que vender nada</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="acceso-en-red" data-buscar-es="acceso desde otros dispositivos acerca de te dice tu version y hasta cuando recibes actualizaciones si hay una version nueva, aqui te avisa para abrir micaja en tu celular o en otra computadora de la tienda, usa esta direccion o escanea el codigo qr con la camara del celular para usar la camara como escaner en el celular, descarga e instala el certificado" data-buscar-en="access from other devices acerca de (about) shows your version and how long you get updates if there is a new version, it lets you know here to open micaja on your phone or another computer in the store, use this address or scan the qr code with your phone camera to use your phone camera as a scanner, download and install the certificate">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/acceso-en-red.jpg">
+            <source src="ayuda/videos/acceso-en-red.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/acceso-en-red.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/acceso-en-red.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.acceso-en-red.titulo">Acceso desde otros dispositivos</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.acceso-en-red.desc">Acerca de te dice tu versión y hasta cuándo recibes actualizaciones</span> · <span data-i18n="v.acceso-en-red.min">25 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.acceso-en-red.f0"><strong>Acerca de</strong> te dice tu versión y hasta cuándo recibes actualizaciones</p>
+              <p data-i18n="v.acceso-en-red.f1">Si hay una versión nueva, aquí te avisa</p>
+              <p data-i18n="v.acceso-en-red.f2">Para abrir MiCaja en tu celular o en otra computadora de la tienda, usa esta dirección</p>
+              <p data-i18n="v.acceso-en-red.f3">O escanea el código QR con la cámara del celular</p>
+              <p data-i18n="v.acceso-en-red.f4">Para usar la cámara como escáner en el celular, descarga e instala el certificado</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="atajos" data-buscar-es="atajos de teclado cobra mas rapido con el teclado todos los atajos estan en el menu de tu cuenta, en teclas rapidas escribe o escanea un codigo y presiona enter: se agrega al carrito f2 te lleva directo al efectivo recibido y esc limpia la busqueda o cierra la ventana abierta" data-buscar-en="keyboard shortcuts check out faster with the keyboard all shortcuts are in your account menu, under teclas rapidas (shortcuts) type or scan a code and press enter: it goes into the cart f2 takes you straight to the cash received and esc clears the search or closes the open window">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/atajos.jpg">
+            <source src="ayuda/videos/atajos.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/atajos.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/atajos.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.atajos.titulo">Atajos de teclado</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.atajos.desc">Cobra más rápido con el teclado</span> · <span data-i18n="v.atajos.min">24 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.atajos.f0">Cobra más rápido con el <strong>teclado</strong></p>
+              <p data-i18n="v.atajos.f1">Todos los atajos están en el menú de tu cuenta, en <strong>Teclas rápidas</strong></p>
+              <p data-i18n="v.atajos.f2">Escribe o escanea un código y presiona <strong>Enter</strong>: se agrega al carrito</p>
+              <p data-i18n="v.atajos.f3"><strong>F2</strong> te lleva directo al efectivo recibido</p>
+              <p data-i18n="v.atajos.f4">Y <strong>Esc</strong> limpia la búsqueda o cierra la ventana abierta</p>
+            </details>
+          </div>
+        </article>
+        <article class="ayuda-video fade-in" id="iniciar-sesion" data-buscar-es="iniciar sesion, cerrarla y recuperar la contrasena cada quien entra con su correo y su contrasena y llega directo a la caja al terminar el turno, cierra sesion desde el menu de tu cuenta ¿se te olvido la contrasena? toca ¿olvidaste tu contrasena? escribe tu correo y te llega un enlace para crear una nueva" data-buscar-en="sign in, sign out and recover your password everyone signs in with their own email and password and goes straight to the register at the end of the shift, sign out from your account menu forgot your password? tap ¿olvidaste tu contrasena? (forgot your password?) type your email and you get a link to create a new one">
+          <video class="ayuda-player" controls preload="none" playsinline poster="ayuda/videos/iniciar-sesion.jpg">
+            <source src="ayuda/videos/iniciar-sesion.mp4" type="video/mp4" />
+            <track kind="subtitles" srclang="es" label="Español" src="ayuda/videos/iniciar-sesion.es.vtt" default />
+            <track kind="subtitles" srclang="en" label="English" src="ayuda/videos/iniciar-sesion.en.vtt" />
+          </video>
+          <div class="ayuda-video-texto">
+            <h3 class="ayuda-video-titulo" data-i18n="v.iniciar-sesion.titulo">Iniciar sesión, cerrarla y recuperar la contraseña</h3>
+            <p class="ayuda-video-desc"><span data-i18n="v.iniciar-sesion.desc">Cada quien entra con su correo y su contraseña</span> · <span data-i18n="v.iniciar-sesion.min">24 s</span></p>
+            <details class="ayuda-guion">
+              <summary data-i18n="ayuda.guion">Lo que dice el video</summary>
+              <p data-i18n="v.iniciar-sesion.f0">Cada quien entra con <strong>su correo y su contraseña</strong></p>
+              <p data-i18n="v.iniciar-sesion.f1">Y llega directo a la caja</p>
+              <p data-i18n="v.iniciar-sesion.f2">Al terminar el turno, <strong>cierra sesión</strong> desde el menú de tu cuenta</p>
+              <p data-i18n="v.iniciar-sesion.f3">¿Se te olvidó la contraseña? Toca <strong>¿Olvidaste tu contraseña?</strong></p>
+              <p data-i18n="v.iniciar-sesion.f4">Escribe tu correo y te llega un enlace para crear una nueva</p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- AYUDA:FIN -->
+
+    <section class="section ayuda-vacio" id="ayuda-vacio" hidden>
+      <div class="container">
+        <h2 class="section-title" data-i18n="ayuda.vacio.title">No encontramos ese video</h2>
+        <p class="section-desc" data-i18n="ayuda.vacio.desc">Prueba con otra palabra, o mándanos mensaje y te explicamos.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="poslogo.png" alt="MiCaja" onerror="this.style.display='none'" />
+          <span class="footer-brand-name">MiCaja</span>
+          <span class="footer-version" id="footer-version">v0.1.29</span>
+        </div>
+        <a href="https://www.facebook.com/profile.php?id=61576392462341" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-ghost-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          <span data-i18n="pie.fb">Visítanos en Facebook</span>
+        </a>
+        <a href="terminos.html" class="footer-terms" data-i18n="pie.terminos">Términos y Condiciones</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n-ayuda.js"></script>
+  <script src="i18n-ayuda-videos.js"></script>
+  <script src="i18n.js"></script>
+  <script src="ayuda.js"></script>
+</body>
+</html>

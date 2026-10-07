@@ -26,6 +26,7 @@
   --esp-seccion:    88px;     /* padding vertical de cada <section> */
   --esp-bloque:     48px;     /* del encabezado de sección a su contenido */
   --gap-col:        48px;     /* separación entre las dos columnas */
+  --gap-botones:    12px;     /* entre botones apilados (manual + videos) */
 
   --radius:         4px;      /* el `rounded` de Tailwind que usa el POS */
   --radius-lg:      6px;      /* `rounded-md` — tarjetas y cajas grandes */
@@ -422,7 +423,10 @@ nav {
 .manual-desc { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 420px; }
 .manual-meta { display: flex; align-items: center; gap: 20px; margin-top: 20px; }
 /* El CTA del manual no se parte: "Descargar Manual" / "Download Manual" */
-.manual-btn { white-space: nowrap; }
+.manual-btn { white-space: nowrap; justify-content: center; }
+/* Descargar el manual y ver los videos: los dos caminos para aprender */
+.manual-acciones { display: flex; flex-direction: column; gap: var(--gap-botones); }
+.footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
 .manual-chip {
   border-radius: var(--radius-pill);
   font-size: 11px;
@@ -982,4 +986,127 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
   .lightbox-inner { transition: opacity 0.15s ease; }
   /* Toggle de idioma */
   .lang-opt { transition: none; }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Centro de ayuda (ayuda.html, octubre 2026)
+   Las tarjetas las genera marketing/videos/publicar-ayuda.js de
+   CopiasMango. Misma rejilla de dos columnas 1fr 1fr que el resto.
+   ══════════════════════════════════════════════════════════════════ */
+
+.hero-ayuda { padding: 96px 0 64px; }
+
+.ayuda-buscador {
+  position: relative;
+  max-width: 480px;
+  margin: 32px auto 0;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.4s forwards;
+}
+.ayuda-buscador svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
+.ayuda-buscador input {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 16px;   /* 16px: menos y iOS hace zoom al enfocar */
+  color: var(--fg-strong);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 14px 20px 14px 44px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ayuda-buscador input::placeholder { color: var(--muted); }
+.ayuda-buscador input:focus { border-color: var(--accent-border); }
+
+.ayuda-indice {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.5s forwards;
+}
+.ayuda-indice a {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.ayuda-indice a:hover,
+.ayuda-indice a:focus-visible { color: var(--accent); border-color: var(--accent-border); }
+
+.ayuda-seccion { scroll-margin-top: 72px; }
+
+.ayuda-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-col);
+  margin-top: var(--esp-bloque);
+}
+
+.ayuda-video { min-width: 0; scroll-margin-top: 72px; }
+.ayuda-player {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.ayuda-player::cue { background: rgba(13, 13, 13, 0.82); color: #fff; }
+.ayuda-player::cue(b) { color: var(--accent); }
+
+.ayuda-video-texto { margin-top: 16px; }
+.ayuda-video-titulo {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--fg-strong);
+  line-height: 1.35;
+}
+.ayuda-video-desc {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.ayuda-guion { margin-top: 12px; }
+.ayuda-guion summary {
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  list-style: none;
+}
+.ayuda-guion summary::-webkit-details-marker { display: none; }
+.ayuda-guion summary::before { content: '+ '; color: var(--accent); }
+.ayuda-guion[open] summary::before { content: '− '; }
+.ayuda-guion summary:hover,
+.ayuda-guion summary:focus-visible { color: var(--fg); }
+.ayuda-guion p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--fg);
+  line-height: 1.6;
+}
+.ayuda-guion strong { color: var(--accent); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .ayuda-grid { grid-template-columns: 1fr; }
 }

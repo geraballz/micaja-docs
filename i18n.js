@@ -13,6 +13,7 @@
 //   data-i18n-alt="clave"          reemplaza el alt de una imagen
 //   data-i18n-aria-label="clave"   reemplaza el aria-label
 //   data-i18n-caption="clave"      reemplaza el data-caption (galería)
+//   data-i18n-placeholder="clave"  reemplaza el placeholder (buscador de ayuda)
 // Y en el diccionario, dos claves reservadas: "@title" y "@description".
 
 (function () {
@@ -25,7 +26,8 @@
   var ATRIBUTOS = {
     'data-i18n-alt': 'alt',
     'data-i18n-aria-label': 'aria-label',
-    'data-i18n-caption': 'data-caption'
+    'data-i18n-caption': 'data-caption',
+    'data-i18n-placeholder': 'placeholder'
   };
 
   // { el, clave, attr, es } — attr null significa innerHTML

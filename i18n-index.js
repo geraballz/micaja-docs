@@ -150,9 +150,11 @@ window.MICAJA_EN = Object.assign(window.MICAJA_EN || {}, {
   'man.chip1': 'PDF · Spanish',
   'man.chip2': 'Updated 2026',
   'man.btn':   'Download Manual',
+  'man.videos': 'Watch the videos',
 
   // ── Pie ──
   'pie.fb':       'Find us on Facebook',
+  'pie.ayuda':    'Help center',
   'pie.terminos': 'Terms and Conditions'
 
 });
