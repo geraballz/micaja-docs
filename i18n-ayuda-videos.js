@@ -113,7 +113,7 @@ window.MICAJA_EN = Object.assign(window.MICAJA_EN || {}, {
   "v.editar-producto.f3": "For everything else, open <strong>Editar</strong> (edit)",
   "v.editar-producto.f4": "New stock arrived? Type how many and MiCaja adds them up",
   "v.editar-producto.f5": "Save, and your inventory is up to date",
-  "v.editar-producto.min": "53 s",
+  "v.editar-producto.min": "22 s",
   "v.precio-rapido.titulo": "Change a price from the register",
   "v.precio-rapido.desc": "Supplier raised prices? Change the price from the register",
   "v.precio-rapido.f0": "Supplier raised prices? Change the price <strong>from the register</strong>",
