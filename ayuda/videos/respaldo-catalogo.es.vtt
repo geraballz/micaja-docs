@@ -1,16 +1,19 @@
 WEBVTT
 
-00:00:00.160 --> 00:00:03.229
+00:00:00.185 --> 00:00:03.254
 Tu catálogo de productos, en un archivo
 
-00:00:03.299 --> 00:00:08.690
+00:00:03.330 --> 00:00:08.721
 <b>Exportar catálogo</b> baja todos tus productos con precios, stock y fotos
 
-00:00:08.818 --> 00:00:13.650
+00:00:08.849 --> 00:00:13.678
 Para cargarlo en otra caja, o recuperarlo, usa <b>Importar catálogo</b>
 
-00:00:13.790 --> 00:00:19.820
-MiCaja te dice cuántos productos trae: actualiza los que ya tienes y crea los nuevos
+00:00:13.755 --> 00:00:19.386
+Antes de escribir nada, MiCaja te enseña qué pasará con cada producto
 
-00:00:19.950 --> 00:00:27.902
+00:00:19.457 --> 00:00:26.047
+Si algo cambia, lo ves con su <b>antes</b> y su <b>después</b>, y el botón dice cuántos productos va a escribir
+
+00:00:26.194 --> 00:00:34.145
 Importar nunca borra nada. Para respaldar todo el sistema, ve a Configuración
